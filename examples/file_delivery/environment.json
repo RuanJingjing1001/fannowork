@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "example.workspace.v1",
+  "adapter": "workspace",
+  "version": "1.0.0",
+  "config": {},
+  "metadata": {
+    "purpose": "framework smoke test"
+  }
+}

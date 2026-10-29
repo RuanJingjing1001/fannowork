@@ -1,0 +1,1 @@
+Produce a one-line delivery note confirming acceptance.

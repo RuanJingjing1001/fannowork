@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "example.file-delivery.001",
+  "title": "Create a short delivery note",
+  "instruction": "Read inputs/brief.txt and write the requested note to outputs/note.txt.",
+  "environment_id": "example.workspace.v1",
+  "inputs": [
+    {
+      "path": "brief.txt",
+      "source": "assets/brief.txt",
+      "media_type": "text/plain"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "note.txt",
+      "media_type": "text/plain",
+      "required": true
+    }
+  ],
+  "verifier": {
+    "adapter": "required_artifacts",
+    "config": {}
+  },
+  "initial_state": {},
+  "taxonomy": {},
+  "metadata": {
+    "purpose": "framework smoke test"
+  }
+}
