@@ -38,6 +38,7 @@ def _required(data: dict[str, Any], key: str, expected: type) -> Any:
 def load_environment(path: str | Path) -> EnvironmentSpec:
     path = Path(path).resolve()
     data = _read_json(path)
+
     return EnvironmentSpec(
         schema_version=int(data.get("schema_version", 1)),
         id=_required(data, "id", str),
@@ -45,13 +46,33 @@ def load_environment(path: str | Path) -> EnvironmentSpec:
         version=_required(data, "version", str),
         config=dict(data.get("config", {})),
         metadata=dict(data.get("metadata", {})),
+        source_dir=path.parent,
     )
-
 
 def load_task(path: str | Path, verify_assets: bool = True) -> TaskSpec:
     path = Path(path).resolve()
     data = _read_json(path)
     verifier_data = _required(data, "verifier", dict)
+
+    has_inline_state = "initial_state" in data
+    has_state_file = "initial_state_file" in data
+    if has_inline_state and has_state_file:
+        raise SpecError(
+            "task cannot define both initial_state and initial_state_file"
+        )
+
+    if has_state_file:
+        state_file = _required(data, "initial_state_file", str)
+        state_path = (path.parent / state_file).resolve()
+        if not state_path.is_relative_to(path.parent):
+            raise SpecError("initial_state_file escapes task directory")
+        initial_state = _read_json(state_path)
+    else:
+        raw_initial_state = data.get("initial_state", {})
+        if not isinstance(raw_initial_state, dict):
+            raise SpecError("field 'initial_state' must be dict")
+        initial_state = dict(raw_initial_state)
+
     task = TaskSpec(
         schema_version=int(data.get("schema_version", 1)),
         id=_required(data, "id", str),
@@ -64,7 +85,7 @@ def load_task(path: str | Path, verify_assets: bool = True) -> TaskSpec:
             adapter=_required(verifier_data, "adapter", str),
             config=dict(verifier_data.get("config", {})),
         ),
-        initial_state=dict(data.get("initial_state", {})),
+        initial_state=initial_state,
         taxonomy=dict(data.get("taxonomy", {})),
         metadata=dict(data.get("metadata", {})),
         source_dir=path.parent,

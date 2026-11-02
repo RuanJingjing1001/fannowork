@@ -1,0 +1,721 @@
+schema_version: "1.0.0"
+
+identity:
+  blueprint_id: litigation-invoice-review-v1
+  title: Litigation Invoice Research Charge Review
+  domain: litigation_dispute_resolution
+  workflow_family: legal_invoice_audit
+  status: source_audited
+
+source:
+  benchmark: harvey-lab
+  task_id: tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice
+  sample_index: 30
+  revision: 97810facfd447317b57f6dd02a1469561c573d79
+  source_path: /data1/rjj/environment-catalog/upstream/legal/harvey-lab/tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice
+  reference_copy_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice
+  license: MIT; see legal/tasks/reference/representative-180-v0.1/licenses/HARVEY_LAB_LICENSE.txt
+  reuse_mode: imported_compatibility_task
+  annotation_path: legal/tasks/reference/representative-180-v0.1/annotations/deepseek-v0.1/harvey-lab__identify-excessive-or-duplicative-research-charges-in-litigation-invoice.json
+  notes:
+    - The task-specific files are copied unchanged into the reference directory.
+    - Shared Harvey LAB runtime code is not part of the reference snapshot.
+    - The DeepSeek annotation is an analysis aid and is not authoritative task evidence.
+
+professional_goal:
+  value: Review a law-firm litigation invoice against billing guidelines and related correspondence, identify non-compliant or excessive research charges, and recommend monetary adjustments in a formal memo.
+  provenance: source_confirmed
+  evidence:
+    - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+      locator: instructions
+      quote: "Review the attached law firm invoice against our billing guidelines and related correspondence, and prepare a memo identifying all non-compliant or excessive charges with recommended adjustments."
+      sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+  notes:
+    - The source task is a bounded document-review exercise, not a live outside-counsel billing system.
+
+agent_contract:
+  public_prompt: >-
+    Review the attached law firm invoice against the billing guidelines and
+    related correspondence. Prepare a memo identifying all supported
+    non-compliant, duplicative, or excessive research charges and recommend
+    supported monetary adjustments. Save the result as
+    output/research-charge-review-memo.docx.
+  must_do:
+    - Inspect the July 2024 invoice and all five supporting materials.
+    - Connect every recommended adjustment to invoice evidence and a governing billing rule or supported comparison.
+    - Calculate and consolidate recommended monetary adjustments.
+    - Produce one DOCX review memo in the output directory.
+    - Preserve every input file unchanged.
+  must_not_expose:
+    - hidden expected findings and amounts from this blueprint
+    - upstream criteria text or identifiers
+    - evaluator implementation and reward weights
+    - reference answers
+  provenance: design_decision
+  evidence:
+    - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+      locator: instructions and deliverables
+      quote: "Output: `research-charge-review-memo.docx`."
+      sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+
+inputs:
+  - id: july_invoice
+    source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/hl-july-2024-invoice.xlsx
+    planned_workspace_path: input/hl-july-2024-invoice.xlsx
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    role: primary_invoice
+    agent_visible: true
+    mutable: false
+    required: true
+    bytes: 22581
+    sha256: 04be162ba4f1a616682638d0aaa03348f776147c5a7bf5a69fd6fd8bba010145
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/hl-july-2024-invoice.xlsx
+        locator: workbook sheets Summary, Fee Detail, Disbursements, Discount
+        quote: null
+        sha256: 04be162ba4f1a616682638d0aaa03348f776147c5a7bf5a69fd6fd8bba010145
+
+  - id: billing_guidelines
+    source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/terraverde-billing-guidelines.docx
+    planned_workspace_path: input/terraverde-billing-guidelines.docx
+    media_type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    role: governing_billing_rules
+    agent_visible: true
+    mutable: false
+    required: true
+    bytes: 57289
+    sha256: 1f959ac43d41ce889caf0e06697a289d6b14adfc55bef9ded06f1f97e8b1b7ef
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: instructions and criteria
+        quote: "against our billing guidelines"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+
+  - id: engagement_letter
+    source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/engagement-letter-cascade.docx
+    planned_workspace_path: input/engagement-letter-cascade.docx
+    media_type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    role: engagement_terms_and_timekeeper_context
+    agent_visible: true
+    mutable: false
+    required: true
+    bytes: 47590
+    sha256: 88a5025a19840a13ffe608f9e65d5d2e327b2fd295436005fe6ecc2701c703cb
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/engagement-letter-cascade.docx
+        locator: complete document
+        quote: null
+        sha256: 88a5025a19840a13ffe608f9e65d5d2e327b2fd295436005fe6ecc2701c703cb
+
+  - id: prior_month_invoice_summary
+    source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/hl-june-2024-invoice-summary.docx
+    planned_workspace_path: input/hl-june-2024-invoice-summary.docx
+    media_type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    role: cross_month_research_comparison
+    agent_visible: true
+    mutable: false
+    required: true
+    bytes: 45252
+    sha256: 9f89d5dd647cf381007a33c16aab3fd69ce2ad91b9f160418beec6bdc48ca881
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: criteria C-033 and C-034
+        quote: "the June 2024 invoice already included approximately 14.5 hours of MTCA research"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+
+  - id: related_matter_summary
+    source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/doe-matter-july-2024-summary.docx
+    planned_workspace_path: input/doe-matter-july-2024-summary.docx
+    media_type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    role: inter_matter_research_comparison
+    agent_visible: true
+    mutable: false
+    required: true
+    bytes: 41598
+    sha256: a861f080fe6e6586b06b39e4f5777f04135882c6a1031cfe4f6d1897deb22ea2
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: criteria C-028 and C-029
+        quote: "overlaps substantially with 12.5 hours of MTCA research he billed to the separate DOE Matter"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+
+  - id: research_cap_email
+    source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/holt-email-research-concerns.eml
+    planned_workspace_path: input/holt-email-research-concerns.eml
+    media_type: message/rfc822
+    role: prior_notice_and_approval_evidence
+    agent_visible: true
+    mutable: false
+    required: true
+    bytes: 5640
+    sha256: cda4b1c1bca19ccc355872ae0b4304a7f50fcebbd57f6376a03bed9a2a4f6676
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: criteria C-004 and C-005
+        quote: "Marcus Holt's June 28, 2024 email to Diane Hargrove reminding the firm of the 12% research cap"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+
+workflow:
+  - step_id: inventory_source_materials
+    professional_operation: Identify the invoice and all supporting rules, engagement terms, correspondence, and comparison materials.
+    required_actions:
+      - filesystem.list
+    inputs:
+      - july_invoice
+      - billing_guidelines
+      - engagement_letter
+      - prior_month_invoice_summary
+      - related_matter_summary
+      - research_cap_email
+    outputs:
+      - source_material_inventory
+    dependencies: []
+    dependency_status: design_decision
+    side_effect: read_only
+    provenance: rule_inferred
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: instructions
+        quote: "Review the attached law firm invoice against our billing guidelines and related correspondence"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+    unknowns:
+      - The source does not prescribe a mandatory order for opening the six files.
+
+  - step_id: extract_rules_and_context
+    professional_operation: Extract billing rules, engagement context, prior notice, prior-month work, and related-matter work.
+    required_actions:
+      - document.extract_text
+      - email.read_eml
+    inputs:
+      - billing_guidelines
+      - engagement_letter
+      - prior_month_invoice_summary
+      - related_matter_summary
+      - research_cap_email
+    outputs:
+      - governing_rules
+      - comparison_evidence
+      - approval_and_notice_evidence
+    dependencies:
+      - inventory_source_materials
+    dependency_status: design_decision
+    side_effect: read_only
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: criteria C-001 through C-046
+        quote: "against our billing guidelines and related correspondence"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+    unknowns: []
+
+  - step_id: inspect_invoice_workbook
+    professional_operation: Inspect workbook structure and read invoice summary, fee entries, disbursements, and discount data.
+    required_actions:
+      - spreadsheet.inspect_workbook
+      - spreadsheet.read_range
+      - spreadsheet.find
+    inputs:
+      - july_invoice
+    outputs:
+      - invoice_summary
+      - fee_entries
+      - disbursement_entries
+      - discount_data
+    dependencies:
+      - inventory_source_materials
+    dependency_status: design_decision
+    side_effect: read_only
+    provenance: implementation_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/hl-july-2024-invoice.xlsx
+        locator: workbook sheet XML; sheets Summary, Fee Detail, Disbursements, Discount
+        quote: null
+        sha256: 04be162ba4f1a616682638d0aaa03348f776147c5a7bf5a69fd6fd8bba010145
+    unknowns:
+      - The workbook contains no stored formulas; calculations must use displayed source values and independent decimal arithmetic.
+
+  - step_id: identify_supported_billing_issues
+    professional_operation: Compare invoice entries with governing rules and comparison evidence to identify supported violations, duplication, excess, and arithmetic errors.
+    required_actions:
+      - spreadsheet.find
+      - document.extract_text
+      - email.read_eml
+    inputs:
+      - governing_rules
+      - comparison_evidence
+      - approval_and_notice_evidence
+      - invoice_summary
+      - fee_entries
+      - disbursement_entries
+      - discount_data
+    outputs:
+      - supported_issue_candidates
+    dependencies:
+      - extract_rules_and_context
+      - inspect_invoice_workbook
+    dependency_status: rule_inferred
+    side_effect: read_only
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: instructions
+        quote: "identifying all non-compliant or excessive charges"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+    unknowns:
+      - The upstream rubric permits judgment for several duplication adjustments rather than one unique amount.
+
+  - step_id: calculate_recommended_adjustments
+    professional_operation: Calculate supported adjustment amounts and an arithmetically consistent consolidated reduction.
+    required_actions:
+      - calculation.evaluate_decimal
+    inputs:
+      - supported_issue_candidates
+      - invoice_summary
+      - fee_entries
+      - disbursement_entries
+      - discount_data
+    outputs:
+      - recommended_adjustments
+      - adjustment_total
+    dependencies:
+      - identify_supported_billing_issues
+    dependency_status: rule_inferred
+    side_effect: read_only
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: instructions and criteria C-002, C-003, C-006, C-009, C-012, C-015, C-019, C-023, C-027, C-030, C-031, C-043, C-044, C-045
+        quote: "with recommended adjustments"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+    unknowns:
+      - Overlapping violations require a documented non-double-counting policy before one canonical total can be enforced.
+
+  - step_id: create_review_memo
+    professional_operation: Create a formal DOCX memo that explains supported issues, cites evidence, prioritizes severity, and consolidates recommended adjustments.
+    required_actions:
+      - document.create
+      - document.insert_heading
+      - document.insert_paragraph
+      - document.add_table
+      - document.save_as
+    inputs:
+      - supported_issue_candidates
+      - recommended_adjustments
+      - adjustment_total
+    outputs:
+      - research_charge_review_memo
+    dependencies:
+      - calculate_recommended_adjustments
+    dependency_status: design_decision
+    side_effect: create_artifact
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: instructions, deliverables, criteria C-037, C-038 and C-043
+        quote: "prepare a memo identifying all non-compliant or excessive charges with recommended adjustments"
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+    unknowns:
+      - Narrative clarity and professional usefulness are only partly deterministic.
+
+environment_requirements:
+  environment_profile: legal-office/v1
+  capabilities:
+    - capability: filesystem
+      required_actions:
+        - filesystem.list
+        - filesystem.read
+      backend: controlled_container_filesystem
+      implementation_status: implemented
+      provenance: implementation_confirmed
+      evidence:
+        - source_path: legal/environments/legal-office/v1/environment.json
+          locator: enabled_actions
+          quote: null
+          sha256: null
+      notes:
+        - Inputs must be mounted read-only and output must use a separate writable prefix.
+
+    - capability: document
+      required_actions:
+        - document.extract_text
+        - document.create
+        - document.insert_heading
+        - document.insert_paragraph
+        - document.add_table
+        - document.save_as
+      backend: libreoffice_writer_uno
+      implementation_status: partial
+      provenance: implementation_confirmed
+      evidence:
+        - source_path: legal/src/fanno_legal/capabilities/document.py
+          locator: DocumentCapability.ACTION_NAMES
+          quote: null
+          sha256: null
+      notes:
+        - Extraction and limited UNO mutation exist; full memo creation and table actions remain missing.
+
+    - capability: spreadsheet
+      required_actions:
+        - spreadsheet.inspect_workbook
+        - spreadsheet.read_range
+        - spreadsheet.find
+      backend: libreoffice_calc_uno
+      implementation_status: missing
+      provenance: design_decision
+      evidence:
+        - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/hl-july-2024-invoice.xlsx
+          locator: workbook sheets Summary, Fee Detail, Disbursements, Discount
+          quote: null
+          sha256: 04be162ba4f1a616682638d0aaa03348f776147c5a7bf5a69fd6fd8bba010145
+      notes:
+        - The Agent backend should use real LibreOffice Calc through UNO.
+        - An independent evaluator may use a different XLSX reader.
+
+    - capability: email_file
+      required_actions:
+        - email.read_eml
+      backend: python_rfc822_adapter
+      implementation_status: missing
+      provenance: design_decision
+      evidence:
+        - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/documents/holt-email-research-concerns.eml
+          locator: complete RFC 822 message
+          quote: null
+          sha256: cda4b1c1bca19ccc355872ae0b4304a7f50fcebbd57f6376a03bed9a2a4f6676
+      notes:
+        - A live mail server is not required because the source email is a static evidence file.
+
+    - capability: calculation
+      required_actions:
+        - calculation.evaluate_decimal
+      backend: restricted_decimal_expression
+      implementation_status: missing
+      provenance: design_decision
+      evidence:
+        - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+          locator: arithmetic criteria
+          quote: "the exact figure is 13.56%"
+          sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+      notes:
+        - Use Decimal semantics for currency and prohibit arbitrary code execution.
+
+state_model:
+  initial_state:
+    input_assets_read_only: true
+    output_directory_empty: true
+    audit_log_empty: true
+    external_services: []
+    provenance: design_decision
+  mutable_state:
+    - output artifacts
+    - LibreOffice user-profile working state
+    - action audit log
+  events: []
+  event_assessment:
+    value: The source task has no staged event or external state mutation.
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: complete task object
+        quote: null
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+  reset_requirements:
+    - restore all six input hashes
+    - remove generated output artifacts
+    - clear the run-specific LibreOffice profile
+    - reset the action audit log
+
+permissions:
+  - actor: agent
+    resource: input/**
+    allowed:
+      - list
+      - read
+    provenance: design_decision
+    notes:
+      - No input modification is authorized.
+
+  - actor: agent
+    resource: output/**
+    allowed:
+      - list
+      - read
+      - create
+      - update
+    provenance: design_decision
+    notes: []
+
+  - actor: agent
+    resource: hidden/**
+    allowed: []
+    provenance: design_decision
+    notes:
+      - Hidden expected facts and evaluator configuration must never be mounted into the Agent container.
+
+deliverables:
+  - id: research_charge_review_memo
+    source_name: research-charge-review-memo.docx
+    planned_workspace_path: output/research-charge-review-memo.docx
+    media_type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    required: true
+    provenance: source_confirmed
+    evidence:
+      - source_path: legal/tasks/reference/representative-180-v0.1/sources/harvey-lab/identify-excessive-or-duplicative-research-charges-in-litigation-invoice/task.json
+        locator: deliverables.research-charge-review-memo.docx
+        quote: "Output: `research-charge-review-memo.docx`."
+        sha256: 8f9f7eab6e276a40dcf91c2d373cf4e8855b65f0db99ac7e6f3aebc3f19a650b
+
+evaluation:
+  visibility: hidden_evaluator_only
+  agent_visible_requirements:
+    - Identify supported non-compliant, duplicative, or excessive research charges.
+    - Recommend and consolidate supported monetary adjustments.
+    - Produce one DOCX memo without modifying source files.
+  hidden_checks:
+    - check_id: artifact_integrity
+      checker: artifact_and_input_integrity
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: []
+      expected_facts:
+        output_path: output/research-charge-review-memo.docx
+        input_sha256_policy: exact_match_blueprint_inputs
+
+    - check_id: research_cap
+      checker: supported_finding_and_decimal_check
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-001, C-002, C-003, C-004, C-005, C-006]
+      expected_facts:
+        guideline_section: "6.2"
+        total_fees: "341820.50"
+        gross_research_charges: "54104.50"
+        net_research_charges: "46372.50"
+        gross_percentage: "15.83"
+        net_percentage: "13.56"
+        cap_percentage: "12"
+        cap_amount: "41018.46"
+        prior_written_approval: false
+        prior_notice_email_date: "2024-06-28"
+
+    - check_id: partner_research_restriction
+      checker: supported_finding_and_decimal_check
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-007, C-008, C-009, C-010, C-011, C-012, C-039]
+      expected_facts:
+        guideline_section: "6.3"
+        hargrove_hours: "5.5"
+        hargrove_billed_rate: "895.00"
+        comparison_rate: "545.00"
+        hargrove_rate_adjustment: "1925.00"
+        briggs_hours: "7.0"
+        briggs_billed_rate: "725.00"
+        briggs_rate_adjustment: "1260.00"
+
+    - check_id: duplicative_mtca_research
+      checker: supported_finding_with_flexible_adjustment
+      deterministic: false
+      implementation_status: missing
+      upstream_criteria: [C-013, C-014, C-015, C-040]
+      expected_facts:
+        guideline_section: "6.4"
+        minimum_supported_wendt_hours: "7.2"
+        wendt_rate: "425.00"
+        example_adjustment: "3060.00"
+
+    - check_id: duplicative_damages_research
+      checker: supported_finding_with_flexible_adjustment
+      deterministic: false
+      implementation_status: missing
+      upstream_criteria: [C-016, C-017, C-044]
+      expected_facts:
+        osei_consequential_damages_hours: "13.0"
+        related_topics:
+          - consequential damages
+          - lost profits
+
+    - check_id: economic_loss_duplication
+      checker: supported_finding_with_minimum_adjustment
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-018, C-019]
+      expected_facts:
+        guideline_section: "6.4"
+        combined_hours: "10.5"
+        minimum_adjustment: "1327.50"
+
+    - check_id: spoliation_esi_duplication
+      checker: supported_finding_with_flexible_adjustment
+      deterministic: false
+      implementation_status: missing
+      upstream_criteria: [C-020, C-045]
+      expected_facts:
+        same_day: "2024-07-29"
+        timekeepers:
+          - Kenji Takahashi
+          - Tyler Wendt
+
+    - check_id: onboarding_and_background_research
+      checker: supported_finding_and_decimal_check
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-021, C-022, C-023, C-041, C-046]
+      expected_facts:
+        guideline_section: "4.3"
+        wendt_hours: "6.3"
+        wendt_adjustment: "2677.50"
+        osei_july_19_amount: "1475.00"
+
+    - check_id: block_billing
+      checker: supported_finding_check
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-024, C-025]
+      expected_facts:
+        guideline_section: "6.5"
+        minimum_non_research_allocation_percentage: "50"
+
+    - check_id: westlaw_disbursement
+      checker: supported_finding_and_decimal_check
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-026, C-027, C-042]
+      expected_facts:
+        guideline_section: "9.3"
+        adjustment: "4850.00"
+
+    - check_id: inter_matter_mtca_duplication
+      checker: supported_finding_check
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-028, C-029]
+      expected_facts:
+        guideline_section: "6.6"
+        related_matter_hours: "12.5"
+
+    - check_id: discount_arithmetic
+      checker: decimal_recalculation
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-030, C-031]
+      expected_facts:
+        gross_research_charges: "54104.50"
+        discount_percentage: "15"
+        stated_discount: "7732.00"
+        correct_discount: "8115.68"
+        understatement: "383.68"
+
+    - check_id: unjust_enrichment_duplication
+      checker: supported_finding_check
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-032]
+      expected_facts:
+        combined_hours: "7.5"
+        dates:
+          - "2024-07-23"
+          - "2024-07-24"
+
+    - check_id: cross_month_mtca_context
+      checker: supported_finding_with_balancing_context
+      deterministic: false
+      implementation_status: missing
+      upstream_criteria: [C-033, C-034]
+      expected_facts:
+        june_hours: "14.5"
+        july_hours: "16.7"
+        reply_brief_date: "2024-07-19"
+
+    - check_id: protected_non_violation
+      checker: prohibited_false_positive
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-035]
+      expected_facts:
+        must_not_disallow:
+          - Evergreen Litigation Support database hosting charge
+        amount: "3325.00"
+
+    - check_id: report_structure_and_arithmetic
+      checker: docx_structure_and_decimal_consistency
+      deterministic: true
+      implementation_status: missing
+      upstream_criteria: [C-036, C-037, C-038, C-043]
+      expected_facts:
+        invoice_total: "387420.50"
+        fees_total: "341820.50"
+        disbursements_total: "45600.00"
+        requires_adjustment_summary: true
+        requires_severity: true
+        aggregate_must_equal_line_items: true
+
+  reward_policy:
+    status: proposed
+    hard_gates:
+      - artifact_integrity
+      - report_structure_and_arithmetic
+    weighted_checks:
+      - research_cap
+      - partner_research_restriction
+      - duplicative_mtca_research
+      - duplicative_damages_research
+      - economic_loss_duplication
+      - spoliation_esi_duplication
+      - onboarding_and_background_research
+      - block_billing
+      - westlaw_disbursement
+      - inter_matter_mtca_duplication
+      - discount_arithmetic
+      - unjust_enrichment_duplication
+      - cross_month_mtca_context
+      - protected_non_violation
+    scoring_note: >-
+      Exact weights are intentionally unset until overlap between recommended
+      adjustments is resolved. A non-double-counting policy is required before
+      one canonical total reduction can be scored.
+
+unknowns:
+  - id: adjustment_overlap_policy
+    value: Several source criteria permit flexible adjustments, and some violations may overlap the same time entries.
+    impact: A fixed expected total could reward double counting or reject a defensible adjustment methodology.
+    status: open
+
+  - id: narrative_quality_checker
+    value: Professional memo clarity, prioritization, and reasoning quality are not fully captured by deterministic string and arithmetic checks.
+    impact: A trusted hybrid checker or human review rubric may still be needed.
+    status: open
+
+  - id: source_material_rights_scope
+    value: The repository declares MIT, but individual task-material provenance has not been independently audited beyond the repository license.
+    impact: Public redistribution of a derivative task should wait for a material-level rights review.
+    status: open
+
+  - id: spreadsheet_rendering_requirements
+    value: The workbook contains no formulas, but visual formatting or merged-cell semantics have not yet been inspected through LibreOffice Calc UNO.
+    impact: The minimum SpreadsheetCapability contract may change after the real Calc integration probe.
+    status: open
+
+implementation_decision:
+  selected_for_implementation: true
+  priority: 1
+  current_phase: blueprint_complete
+  next_missing_capability: spreadsheet
+  proposed_first_slice:
+    - spreadsheet.inspect_workbook
+    - spreadsheet.read_range
+    - spreadsheet.find
+  blockers:
+    - Resolve the evaluator non-double-counting policy before final reward weights are fixed.
+  non_goals_for_first_slice:
+    - live mailbox service
+    - spreadsheet mutation
+    - browser access
+    - OCR
+    - staged events

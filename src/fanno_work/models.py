@@ -53,7 +53,11 @@ class EnvironmentSpec:
     version: str
     config: JsonObject = field(default_factory=dict)
     metadata: JsonObject = field(default_factory=dict)
-
+    source_dir: Path = field(
+        default=Path("."),
+        repr=False,
+        compare=False,
+    )
 
 @dataclass(frozen=True)
 class ActionDescriptor:

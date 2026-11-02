@@ -1,0 +1,502 @@
+{
+  "task_id": "tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table",
+  "status": "success",
+  "prompt_version": "legal-workflow-extract-v0.1.0",
+  "requested_model": "deepseek-flash",
+  "returned_model": "deepseek-flash",
+  "extraction": {
+    "schema_version": "0.1",
+    "task_id": "tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table",
+    "task_type": {
+      "normalized": "analyze",
+      "original": "analyze",
+      "evidence": [
+        {
+          "quote": "\"work_type\": \"analyze\"",
+          "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+          "start_char": null,
+          "end_char": null
+        }
+      ],
+      "provenance": "source_fact"
+    },
+    "actions": [
+      {
+        "normalized": "review_deal_documents",
+        "original": "Review the attached deal documents for the proposed Series C financing",
+        "evidence": [
+          {
+            "quote": "Review the attached deal documents for the proposed Series C financing",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prepare_cap_table_analysis_memo",
+        "original": "prepare a comprehensive cap table analysis memo",
+        "evidence": [
+          {
+            "quote": "prepare a comprehensive cap table analysis memo",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "compare_term_sheet_terms",
+        "original": "Term Sheet Comparison Memo for Series C Financing",
+        "evidence": [
+          {
+            "quote": "Extract Key Terms from Cap Table — Term Sheet Comparison Memo for Series C Financing",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "identify_option_pool_miscalculation",
+        "original": "identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "identify_missing_convertible_note_conversion_shares",
+        "original": "identifies that the cap table omits 320,616 shares of Series A Preferred issued to Firstvale Ventures upon conversion of the $750,000 convertible note (plus accrued interest)",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the cap table omits 320,616 shares of Series A Preferred issued to Firstvale Ventures upon conversion of the $750,000 convertible note (plus accrued interest).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "calculate_note_conversion_shares",
+        "original": "shows or references that the convertible note conversion produced approximately 320,616 shares",
+        "evidence": [
+          {
+            "quote": "PASS if the memo shows or references that the convertible note conversion produced approximately 320,616 shares (from $769,479.45 total conversion amount at $2.40/share conversion price, where $2.40 is the 20% discount to $3.00 Series A price).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "recalculate_series_b_pre_money_valuation",
+        "original": "identifies that the cap table spreadsheet lists the Series B pre-money valuation as $84,000,000 but the correct pre-money valuation is $81,000,000",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the cap table spreadsheet lists the Series B pre-money valuation as $84,000,000 but the correct pre-money valuation is $81,000,000 (13,500,000 shares × $6.00/share).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "recalculate_series_c_price_per_share",
+        "original": "identifies that the Series C term sheet states a price per share of $8.18, which is based on an incorrect fully diluted share count of 22,004,000 shares instead of the correct 23,170,616 shares",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the Series C term sheet states a price per share of $8.18, which is based on an incorrect fully diluted share count of 22,004,000 shares instead of the correct 23,170,616 shares.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "analyze_anti_dilution_mechanisms",
+        "original": "identifies that the Series C term sheet proposes full ratchet anti-dilution protection while Series A and Series B both have broad-based weighted average anti-dilution",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the Series C term sheet proposes full ratchet anti-dilution protection while Series A and Series B both have broad-based weighted average anti-dilution, creating a structural inconsistency across preferred series.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "identify_series_b_consent_requirement",
+        "original": "identifies that the Series B Investors' Rights Agreement contains a protective provision requiring majority Series B approval",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the Series B Investors' Rights Agreement contains a protective provision requiring majority Series B approval for any financing that grants liquidation preferences senior to or greater than Series B's 1x, and that the proposed Series C 1.5x liquidation preference triggers this consent requirement.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "compute_drag_along_threshold",
+        "original": "calculates the drag-along threshold as approximately $312.4 million",
+        "evidence": [
+          {
+            "quote": "PASS if the memo calculates the drag-along threshold as approximately $312.4 million (3x the aggregate liquidation preferences of approximately $104.1M, comprising ~$11.46M Series A + $25.2M Series B + ~$67.49M Series C).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "analyze_board_reduction_and_series_a_consent",
+        "original": "identifies that reducing the board from 5 to 3 seats would eliminate the Series A designated board seat",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that reducing the board from 5 to 3 seats would eliminate the Series A designated board seat, and that the existing Voting Agreement grants Series A preferred holders the right to designate one board member and requires their consent to remove that seat.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "analyze_series_c_option_grant_veto",
+        "original": "identifies that the Series C protective provisions include a separate class vote on 'any equity issuance, including option grants'",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the Series C protective provisions include a separate class vote on 'any equity issuance, including option grants,' which effectively gives Ridgeline/Series C a veto over routine employee stock option grants.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "analyze_pay_to_play_provision",
+        "original": "identifies the pay-to-play provision that converts non-participating preferred holders to common stock in future down rounds",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies the pay-to-play provision that converts non-participating preferred holders to common stock in future down rounds, and discusses the risk this poses to existing investors (particularly smaller or older funds like Firstvale) who may be unable to fund pro rata in a future down round, resulting in loss of all preferred rights including liquidation preference and anti-dilution protection.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prepare_corrected_pre_money_ownership_table",
+        "original": "includes a corrected pre-money ownership summary table that shows Firstvale's corrected Series A shares as 3,820,616",
+        "evidence": [
+          {
+            "quote": "PASS if the memo includes a corrected pre-money ownership summary table that shows Firstvale's corrected Series A shares as 3,820,616.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prepare_pro_forma_post_money_ownership_table",
+        "original": "includes a pro forma post-Series C ownership summary table showing the impact of Series C shares and the expanded option pool on ownership percentages",
+        "evidence": [
+          {
+            "quote": "PASS if the memo includes a pro forma post-Series C ownership summary table showing the impact of Series C shares and the expanded option pool on ownership percentages.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "develop_recommendations",
+        "original": "memo recommends negotiating the Series C anti-dilution provision from full ratchet to broad-based weighted average",
+        "evidence": [
+          {
+            "quote": "PASS if the memo recommends negotiating the Series C anti-dilution provision from full ratchet to broad-based weighted average (or at minimum recommends resisting full ratchet).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          },
+          {
+            "quote": "PASS if the memo recommends negotiating a carve-out from the Series C equity issuance veto for option grants made under the board-approved equity incentive plan (or within an approved pool/budget).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          },
+          {
+            "quote": "PASS if the memo recommends obtaining majority Series B consent (from Summit Arc Capital) as a condition to proceeding with the Series C financing, given the 1.5x preference triggers the protective provision.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          },
+          {
+            "quote": "PASS if the memo recommends either obtaining Series A consent for elimination of their board seat, negotiating to preserve the Series A seat, or addressing the Voting Agreement requirement as part of Series C negotiations.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "objects": [
+      {
+        "normalized": "attached_deal_documents",
+        "original": "attached deal documents",
+        "evidence": [
+          {
+            "quote": "Review the attached deal documents for the proposed Series C financing",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "proposed_series_c_financing",
+        "original": "proposed Series C financing",
+        "evidence": [
+          {
+            "quote": "Review the attached deal documents for the proposed Series C financing",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "cap_table_spreadsheet",
+        "original": "cap table spreadsheet",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "series_c_term_sheet",
+        "original": "Series C term sheet",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the Series C term sheet states a price per share of $8.18, which is based on an incorrect fully diluted share count of 22,004,000 shares instead of the correct 23,170,616 shares.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "available_option_pool",
+        "original": "available option pool",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "convertible_note",
+        "original": "$750,000 convertible note",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the cap table omits 320,616 shares of Series A Preferred issued to Firstvale Ventures upon conversion of the $750,000 convertible note (plus accrued interest).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "series_b_pre_money_valuation",
+        "original": "Series B pre-money valuation",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the cap table spreadsheet lists the Series B pre-money valuation as $84,000,000 but the correct pre-money valuation is $81,000,000 (13,500,000 shares × $6.00/share).",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "series_b_investors_rights_agreement",
+        "original": "Series B Investors' Rights Agreement",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the Series B Investors' Rights Agreement contains a protective provision requiring majority Series B approval for any financing that grants liquidation preferences senior to or greater than Series B's 1x, and that the proposed Series C 1.5x liquidation preference triggers this consent requirement.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "voting_agreement",
+        "original": "Voting Agreement",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that reducing the board from 5 to 3 seats would eliminate the Series A designated board seat, and that the existing Voting Agreement grants Series A preferred holders the right to designate one board member and requires their consent to remove that seat.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "series_c_protective_provisions",
+        "original": "Series C protective provisions",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies that the Series C protective provisions include a separate class vote on 'any equity issuance, including option grants,' which effectively gives Ridgeline/Series C a veto over routine employee stock option grants.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "pay_to_play_provision",
+        "original": "pay-to-play provision",
+        "evidence": [
+          {
+            "quote": "PASS if the memo identifies the pay-to-play provision that converts non-participating preferred holders to common stock in future down rounds, and discusses the risk this poses to existing investors (particularly smaller or older funds like Firstvale) who may be unable to fund pro rata in a future down round, resulting in loss of all preferred rights including liquidation preference and anti-dilution protection.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "corrected_pre_money_ownership_summary_table",
+        "original": "corrected pre-money ownership summary table",
+        "evidence": [
+          {
+            "quote": "PASS if the memo includes a corrected pre-money ownership summary table that shows Firstvale's corrected Series A shares as 3,820,616.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "pro_forma_post_money_ownership_summary_table",
+        "original": "pro forma post-Series C ownership summary table",
+        "evidence": [
+          {
+            "quote": "PASS if the memo includes a pro forma post-Series C ownership summary table showing the impact of Series C shares and the expanded option pool on ownership percentages.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "deliverables": [
+      {
+        "normalized": "cap_table_analysis_memo_docx",
+        "original": "cap-table-analysis-memo.docx",
+        "evidence": [
+          {
+            "quote": "Output: `cap-table-analysis-memo.docx`.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "workflow_signature": [
+      "review_deal_documents",
+      "analyze_cap_table",
+      "compare_term_sheet_terms",
+      "identify_option_pool_miscalculation",
+      "identify_missing_convertible_note_conversion_shares",
+      "calculate_note_conversion_shares",
+      "recalculate_series_b_pre_money_valuation",
+      "recalculate_series_c_price_per_share",
+      "analyze_anti_dilution_mechanisms",
+      "identify_series_b_consent_requirement",
+      "compute_drag_along_threshold",
+      "analyze_board_reduction_and_series_a_consent",
+      "analyze_series_c_option_grant_veto",
+      "analyze_pay_to_play_provision",
+      "prepare_corrected_pre_money_ownership_table",
+      "prepare_pro_forma_post_money_ownership_table",
+      "develop_recommendations",
+      "prepare_cap_table_analysis_memo"
+    ],
+    "workflow_evidence": [
+      {
+        "quote": "Extract Key Terms from Cap Table — Term Sheet Comparison Memo for Series C Financing",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Review the attached deal documents for the proposed Series C financing and prepare a comprehensive cap table analysis memo.",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Output: `cap-table-analysis-memo.docx`.",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json",
+        "start_char": null,
+        "end_char": null
+      }
+    ],
+    "unknowns": [
+      "Specific software tools are not specified.",
+      "Whether any additional deal documents beyond those referenced in the criteria are attached is not specified.",
+      "Jurisdiction is not specified."
+    ],
+    "confidence": 0.92
+  },
+  "raw_responses": [
+    "{\"schema_version\":\"0.1\",\"task_id\":\"tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table\",\"task_type\":{\"provenance\":\"source_fact\",\"original\":\"analyze\",\"normalized\":\"analyze\",\"evidence\":[{\"quote\":\"\\\"work_type\\\": \\\"analyze\\\"\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},\"actions\":[{\"provenance\":\"source_fact\",\"original\":\"Review the attached deal documents for the proposed Series C financing\",\"normalized\":\"review_deal_documents\",\"evidence\":[{\"quote\":\"Review the attached deal documents for the proposed Series C financing\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"prepare a comprehensive cap table analysis memo\",\"normalized\":\"prepare_cap_table_analysis_memo\",\"evidence\":[{\"quote\":\"prepare a comprehensive cap table analysis memo\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"Term Sheet Comparison Memo for Series C Financing\",\"normalized\":\"compare_term_sheet_terms\",\"evidence\":[{\"quote\":\"Extract Key Terms from Cap Table — Term Sheet Comparison Memo for Series C Financing\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options\",\"normalized\":\"identify_option_pool_miscalculation\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that the cap table omits 320,616 shares of Series A Preferred issued to Firstvale Ventures upon conversion of the $750,000 convertible note (plus accrued interest)\",\"normalized\":\"identify_missing_convertible_note_conversion_shares\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the cap table omits 320,616 shares of Series A Preferred issued to Firstvale Ventures upon conversion of the $750,000 convertible note (plus accrued interest).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"shows or references that the convertible note conversion produced approximately 320,616 shares\",\"normalized\":\"calculate_note_conversion_shares\",\"evidence\":[{\"quote\":\"PASS if the memo shows or references that the convertible note conversion produced approximately 320,616 shares (from $769,479.45 total conversion amount at $2.40/share conversion price, where $2.40 is the 20% discount to $3.00 Series A price).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that the cap table spreadsheet lists the Series B pre-money valuation as $84,000,000 but the correct pre-money valuation is $81,000,000\",\"normalized\":\"recalculate_series_b_pre_money_valuation\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the cap table spreadsheet lists the Series B pre-money valuation as $84,000,000 but the correct pre-money valuation is $81,000,000 (13,500,000 shares × $6.00/share).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that the Series C term sheet states a price per share of $8.18, which is based on an incorrect fully diluted share count of 22,004,000 shares instead of the correct 23,170,616 shares\",\"normalized\":\"recalculate_series_c_price_per_share\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the Series C term sheet states a price per share of $8.18, which is based on an incorrect fully diluted share count of 22,004,000 shares instead of the correct 23,170,616 shares.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that the Series C term sheet proposes full ratchet anti-dilution protection while Series A and Series B both have broad-based weighted average anti-dilution\",\"normalized\":\"analyze_anti_dilution_mechanisms\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the Series C term sheet proposes full ratchet anti-dilution protection while Series A and Series B both have broad-based weighted average anti-dilution, creating a structural inconsistency across preferred series.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that the Series B Investors' Rights Agreement contains a protective provision requiring majority Series B approval\",\"normalized\":\"identify_series_b_consent_requirement\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the Series B Investors' Rights Agreement contains a protective provision requiring majority Series B approval for any financing that grants liquidation preferences senior to or greater than Series B's 1x, and that the proposed Series C 1.5x liquidation preference triggers this consent requirement.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"calculates the drag-along threshold as approximately $312.4 million\",\"normalized\":\"compute_drag_along_threshold\",\"evidence\":[{\"quote\":\"PASS if the memo calculates the drag-along threshold as approximately $312.4 million (3x the aggregate liquidation preferences of approximately $104.1M, comprising ~$11.46M Series A + $25.2M Series B + ~$67.49M Series C).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that reducing the board from 5 to 3 seats would eliminate the Series A designated board seat\",\"normalized\":\"analyze_board_reduction_and_series_a_consent\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that reducing the board from 5 to 3 seats would eliminate the Series A designated board seat, and that the existing Voting Agreement grants Series A preferred holders the right to designate one board member and requires their consent to remove that seat.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies that the Series C protective provisions include a separate class vote on 'any equity issuance, including option grants'\",\"normalized\":\"analyze_series_c_option_grant_veto\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the Series C protective provisions include a separate class vote on 'any equity issuance, including option grants,' which effectively gives Ridgeline/Series C a veto over routine employee stock option grants.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"identifies the pay-to-play provision that converts non-participating preferred holders to common stock in future down rounds\",\"normalized\":\"analyze_pay_to_play_provision\",\"evidence\":[{\"quote\":\"PASS if the memo identifies the pay-to-play provision that converts non-participating preferred holders to common stock in future down rounds, and discusses the risk this poses to existing investors (particularly smaller or older funds like Firstvale) who may be unable to fund pro rata in a future down round, resulting in loss of all preferred rights including liquidation preference and anti-dilution protection.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"includes a corrected pre-money ownership summary table that shows Firstvale's corrected Series A shares as 3,820,616\",\"normalized\":\"prepare_corrected_pre_money_ownership_table\",\"evidence\":[{\"quote\":\"PASS if the memo includes a corrected pre-money ownership summary table that shows Firstvale's corrected Series A shares as 3,820,616.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"includes a pro forma post-Series C ownership summary table showing the impact of Series C shares and the expanded option pool on ownership percentages\",\"normalized\":\"prepare_pro_forma_post_money_ownership_table\",\"evidence\":[{\"quote\":\"PASS if the memo includes a pro forma post-Series C ownership summary table showing the impact of Series C shares and the expanded option pool on ownership percentages.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"memo recommends negotiating the Series C anti-dilution provision from full ratchet to broad-based weighted average\",\"normalized\":\"develop_recommendations\",\"evidence\":[{\"quote\":\"PASS if the memo recommends negotiating the Series C anti-dilution provision from full ratchet to broad-based weighted average (or at minimum recommends resisting full ratchet).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"},{\"quote\":\"PASS if the memo recommends negotiating a carve-out from the Series C equity issuance veto for option grants made under the board-approved equity incentive plan (or within an approved pool/budget).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"},{\"quote\":\"PASS if the memo recommends obtaining majority Series B consent (from Summit Arc Capital) as a condition to proceeding with the Series C financing, given the 1.5x preference triggers the protective provision.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"},{\"quote\":\"PASS if the memo recommends either obtaining Series A consent for elimination of their board seat, negotiating to preserve the Series A seat, or addressing the Voting Agreement requirement as part of Series C negotiations.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]}],\"objects\":[{\"provenance\":\"source_fact\",\"original\":\"attached deal documents\",\"normalized\":\"attached_deal_documents\",\"evidence\":[{\"quote\":\"Review the attached deal documents for the proposed Series C financing\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"proposed Series C financing\",\"normalized\":\"proposed_series_c_financing\",\"evidence\":[{\"quote\":\"Review the attached deal documents for the proposed Series C financing\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"cap table spreadsheet\",\"normalized\":\"cap_table_spreadsheet\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"Series C term sheet\",\"normalized\":\"series_c_term_sheet\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the Series C term sheet states a price per share of $8.18, which is based on an incorrect fully diluted share count of 22,004,000 shares instead of the correct 23,170,616 shares.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"available option pool\",\"normalized\":\"available_option_pool\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the cap table spreadsheet understates the available option pool by failing to add back 175,000 forfeited/cancelled options.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"$750,000 convertible note\",\"normalized\":\"convertible_note\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the cap table omits 320,616 shares of Series A Preferred issued to Firstvale Ventures upon conversion of the $750,000 convertible note (plus accrued interest).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"Series B pre-money valuation\",\"normalized\":\"series_b_pre_money_valuation\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the cap table spreadsheet lists the Series B pre-money valuation as $84,000,000 but the correct pre-money valuation is $81,000,000 (13,500,000 shares × $6.00/share).\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"Series B Investors' Rights Agreement\",\"normalized\":\"series_b_investors_rights_agreement\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the Series B Investors' Rights Agreement contains a protective provision requiring majority Series B approval for any financing that grants liquidation preferences senior to or greater than Series B's 1x, and that the proposed Series C 1.5x liquidation preference triggers this consent requirement.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"Voting Agreement\",\"normalized\":\"voting_agreement\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that reducing the board from 5 to 3 seats would eliminate the Series A designated board seat, and that the existing Voting Agreement grants Series A preferred holders the right to designate one board member and requires their consent to remove that seat.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"Series C protective provisions\",\"normalized\":\"series_c_protective_provisions\",\"evidence\":[{\"quote\":\"PASS if the memo identifies that the Series C protective provisions include a separate class vote on 'any equity issuance, including option grants,' which effectively gives Ridgeline/Series C a veto over routine employee stock option grants.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"pay-to-play provision\",\"normalized\":\"pay_to_play_provision\",\"evidence\":[{\"quote\":\"PASS if the memo identifies the pay-to-play provision that converts non-participating preferred holders to common stock in future down rounds, and discusses the risk this poses to existing investors (particularly smaller or older funds like Firstvale) who may be unable to fund pro rata in a future down round, resulting in loss of all preferred rights including liquidation preference and anti-dilution protection.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"corrected pre-money ownership summary table\",\"normalized\":\"corrected_pre_money_ownership_summary_table\",\"evidence\":[{\"quote\":\"PASS if the memo includes a corrected pre-money ownership summary table that shows Firstvale's corrected Series A shares as 3,820,616.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]},{\"provenance\":\"source_fact\",\"original\":\"pro forma post-Series C ownership summary table\",\"normalized\":\"pro_forma_post_money_ownership_summary_table\",\"evidence\":[{\"quote\":\"PASS if the memo includes a pro forma post-Series C ownership summary table showing the impact of Series C shares and the expanded option pool on ownership percentages.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]}],\"deliverables\":[{\"provenance\":\"source_fact\",\"original\":\"cap-table-analysis-memo.docx\",\"normalized\":\"cap_table_analysis_memo_docx\",\"evidence\":[{\"quote\":\"Output: `cap-table-analysis-memo.docx`.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}]}],\"workflow_signature\":[\"review_deal_documents\",\"analyze_cap_table\",\"compare_term_sheet_terms\",\"identify_option_pool_miscalculation\",\"identify_missing_convertible_note_conversion_shares\",\"calculate_note_conversion_shares\",\"recalculate_series_b_pre_money_valuation\",\"recalculate_series_c_price_per_share\",\"analyze_anti_dilution_mechanisms\",\"identify_series_b_consent_requirement\",\"compute_drag_along_threshold\",\"analyze_board_reduction_and_series_a_consent\",\"analyze_series_c_option_grant_veto\",\"analyze_pay_to_play_provision\",\"prepare_corrected_pre_money_ownership_table\",\"prepare_pro_forma_post_money_ownership_table\",\"develop_recommendations\",\"prepare_cap_table_analysis_memo\"],\"workflow_evidence\":[{\"quote\":\"Extract Key Terms from Cap Table — Term Sheet Comparison Memo for Series C Financing\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"},{\"quote\":\"Review the attached deal documents for the proposed Series C financing and prepare a comprehensive cap table analysis memo.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"},{\"quote\":\"Output: `cap-table-analysis-memo.docx`.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/emerging-companies-venture-capital/extract-key-terms-from-cap-table/task.json\"}],\"unknowns\":[\"Specific software tools are not specified.\",\"Whether any additional deal documents beyond those referenced in the criteria are attached is not specified.\",\"Jurisdiction is not specified.\"],\"confidence\":0.92}"
+  ],
+  "attempts": 1,
+  "failure_reason": null
+}

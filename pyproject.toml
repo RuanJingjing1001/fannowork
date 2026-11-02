@@ -11,6 +11,8 @@ dependencies = []
 
 [project.scripts]
 fanno-work = "fanno_work.cli:main"
+fanno-tool = "fanno_work.gateway.cli:main"
+fanno-control = "fanno_work.gateway.control_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

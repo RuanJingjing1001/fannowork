@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fanno.local/schemas/legal-task-blueprint-1.0.0.json",
+  "title": "Fanno Legal Task Blueprint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "identity",
+    "source",
+    "professional_goal",
+    "agent_contract",
+    "inputs",
+    "workflow",
+    "environment_requirements",
+    "state_model",
+    "permissions",
+    "deliverables",
+    "evaluation",
+    "unknowns",
+    "implementation_decision"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "identity": {"$ref": "#/$defs/identity"},
+    "source": {"$ref": "#/$defs/source"},
+    "professional_goal": {"$ref": "#/$defs/claim"},
+    "agent_contract": {"$ref": "#/$defs/agentContract"},
+    "inputs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/input"}
+    },
+    "workflow": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/workflowStep"}
+    },
+    "environment_requirements": {"$ref": "#/$defs/environmentRequirements"},
+    "state_model": {"type": "object"},
+    "permissions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/permission"}
+    },
+    "deliverables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/deliverable"}
+    },
+    "evaluation": {"$ref": "#/$defs/evaluation"},
+    "unknowns": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/unknown"}
+    },
+    "implementation_decision": {"type": "object"}
+  },
+  "$defs": {
+    "provenance": {
+      "enum": [
+        "source_confirmed",
+        "implementation_confirmed",
+        "design_decision",
+        "rule_inferred",
+        "unverified"
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_path"],
+      "properties": {
+        "source_path": {"type": "string", "minLength": 1},
+        "locator": {"type": ["string", "null"]},
+        "quote": {"type": ["string", "null"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "provenance", "evidence"],
+      "properties": {
+        "value": {},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "evidence": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/evidence"}
+        },
+        "notes": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "blueprint_id",
+        "title",
+        "domain",
+        "workflow_family",
+        "status"
+      ],
+      "properties": {
+        "blueprint_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+        "title": {"type": "string", "minLength": 1},
+        "domain": {"type": "string", "minLength": 1},
+        "workflow_family": {"type": "string", "minLength": 1},
+        "status": {
+          "enum": ["draft", "source_audited", "implementation_ready", "implemented", "validated"]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "benchmark",
+        "task_id",
+        "revision",
+        "source_path",
+        "reference_copy_path",
+        "license",
+        "reuse_mode"
+      ],
+      "properties": {
+        "benchmark": {"type": "string"},
+        "task_id": {"type": "string"},
+        "sample_index": {"type": "integer", "minimum": 0},
+        "revision": {"type": "string"},
+        "source_path": {"type": "string"},
+        "reference_copy_path": {"type": "string"},
+        "license": {"type": "string"},
+        "reuse_mode": {
+          "enum": ["reference_only", "imported_compatibility_task", "native_derivative"]
+        },
+        "annotation_path": {"type": ["string", "null"]},
+        "notes": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "agentContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "public_prompt",
+        "must_do",
+        "must_not_expose",
+        "provenance",
+        "evidence"
+      ],
+      "properties": {
+        "public_prompt": {"type": "string"},
+        "must_do": {"type": "array", "items": {"type": "string"}},
+        "must_not_expose": {"type": "array", "items": {"type": "string"}},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      }
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_path",
+        "planned_workspace_path",
+        "media_type",
+        "role",
+        "agent_visible",
+        "mutable",
+        "required",
+        "provenance",
+        "evidence"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+        "source_path": {"type": "string"},
+        "planned_workspace_path": {"type": "string"},
+        "media_type": {"type": "string"},
+        "role": {"type": "string"},
+        "agent_visible": {"type": "boolean"},
+        "mutable": {"type": "boolean"},
+        "required": {"type": "boolean"},
+        "bytes": {"type": "integer", "minimum": 0},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      }
+    },
+    "workflowStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "step_id",
+        "professional_operation",
+        "required_actions",
+        "inputs",
+        "outputs",
+        "dependencies",
+        "dependency_status",
+        "side_effect",
+        "provenance",
+        "evidence",
+        "unknowns"
+      ],
+      "properties": {
+        "step_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+        "professional_operation": {"type": "string"},
+        "required_actions": {"type": "array", "items": {"type": "string"}},
+        "inputs": {"type": "array", "items": {"type": "string"}},
+        "outputs": {"type": "array", "items": {"type": "string"}},
+        "dependencies": {"type": "array", "items": {"type": "string"}},
+        "dependency_status": {"$ref": "#/$defs/provenance"},
+        "side_effect": {
+          "enum": ["read_only", "create_artifact", "modify_artifact", "external_side_effect", "unknown"]
+        },
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+        "unknowns": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capability",
+        "required_actions",
+        "backend",
+        "implementation_status",
+        "provenance",
+        "evidence"
+      ],
+      "properties": {
+        "capability": {"type": "string"},
+        "required_actions": {"type": "array", "items": {"type": "string"}},
+        "backend": {"type": "string"},
+        "implementation_status": {"enum": ["implemented", "partial", "missing", "not_required"]},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "environmentRequirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["environment_profile", "capabilities"],
+      "properties": {
+        "environment_profile": {"type": "string"},
+        "capabilities": {"type": "array", "items": {"$ref": "#/$defs/capability"}}
+      }
+    },
+    "permission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor", "resource", "allowed", "provenance"],
+      "properties": {
+        "actor": {"type": "string"},
+        "resource": {"type": "string"},
+        "allowed": {"type": "array", "items": {"type": "string"}},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "deliverable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_name",
+        "planned_workspace_path",
+        "media_type",
+        "required",
+        "provenance",
+        "evidence"
+      ],
+      "properties": {
+        "id": {"type": "string"},
+        "source_name": {"type": "string"},
+        "planned_workspace_path": {"type": "string"},
+        "media_type": {"type": "string"},
+        "required": {"type": "boolean"},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      }
+    },
+    "hiddenCheck": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["check_id", "checker", "deterministic", "implementation_status", "upstream_criteria"],
+      "properties": {
+        "check_id": {"type": "string"},
+        "checker": {"type": "string"},
+        "deterministic": {"type": "boolean"},
+        "implementation_status": {"enum": ["implemented", "partial", "missing"]},
+        "upstream_criteria": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "visibility",
+        "agent_visible_requirements",
+        "hidden_checks",
+        "reward_policy"
+      ],
+      "properties": {
+        "visibility": {"const": "hidden_evaluator_only"},
+        "agent_visible_requirements": {"type": "array", "items": {"type": "string"}},
+        "hidden_checks": {"type": "array", "items": {"$ref": "#/$defs/hiddenCheck"}},
+        "reward_policy": {"type": "object"}
+      }
+    },
+    "unknown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "value", "impact", "status"],
+      "properties": {
+        "id": {"type": "string"},
+        "value": {"type": "string"},
+        "impact": {"type": "string"},
+        "status": {"enum": ["open", "resolved", "accepted_gap"]}
+      }
+    }
+  }
+}

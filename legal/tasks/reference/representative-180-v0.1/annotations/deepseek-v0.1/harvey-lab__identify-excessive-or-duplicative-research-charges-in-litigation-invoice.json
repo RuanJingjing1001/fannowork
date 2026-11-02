@@ -1,0 +1,201 @@
+{
+  "task_id": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+  "status": "success",
+  "prompt_version": "legal-workflow-extract-v0.1.0",
+  "requested_model": "deepseek-flash",
+  "returned_model": "deepseek-flash",
+  "extraction": {
+    "schema_version": "0.1",
+    "task_id": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+    "task_type": {
+      "normalized": "review",
+      "original": "review",
+      "evidence": [
+        {
+          "quote": "\"work_type\": \"review\"",
+          "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+          "start_char": null,
+          "end_char": null
+        }
+      ],
+      "provenance": "source_fact"
+    },
+    "actions": [
+      {
+        "normalized": "review_attached_invoice",
+        "original": "Review the attached law firm invoice",
+        "evidence": [
+          {
+            "quote": "Review the attached law firm invoice",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "compare_against_billing_guidelines_and_correspondence",
+        "original": "against our billing guidelines and related correspondence",
+        "evidence": [
+          {
+            "quote": "against our billing guidelines and related correspondence",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "identify_noncompliant_or_excessive_charges",
+        "original": "identifying all non-compliant or excessive charges",
+        "evidence": [
+          {
+            "quote": "identifying all non-compliant or excessive charges",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "recommend_adjustments",
+        "original": "with recommended adjustments",
+        "evidence": [
+          {
+            "quote": "with recommended adjustments",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prepare_memo",
+        "original": "prepare a memo",
+        "evidence": [
+          {
+            "quote": "prepare a memo",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "objects": [
+      {
+        "normalized": "law_firm_invoice",
+        "original": "attached law firm invoice",
+        "evidence": [
+          {
+            "quote": "attached law firm invoice",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "billing_guidelines",
+        "original": "billing guidelines",
+        "evidence": [
+          {
+            "quote": "billing guidelines",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "related_correspondence",
+        "original": "related correspondence",
+        "evidence": [
+          {
+            "quote": "related correspondence",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "noncompliant_or_excessive_charges",
+        "original": "non-compliant or excessive charges",
+        "evidence": [
+          {
+            "quote": "non-compliant or excessive charges",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "recommended_adjustments",
+        "original": "recommended adjustments",
+        "evidence": [
+          {
+            "quote": "recommended adjustments",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "deliverables": [
+      {
+        "normalized": "research-charge-review-memo.docx",
+        "original": "research-charge-review-memo.docx",
+        "evidence": [
+          {
+            "quote": "Output: `research-charge-review-memo.docx`.",
+            "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "workflow_signature": [
+      "review_attached_invoice",
+      "compare_against_billing_guidelines_and_correspondence",
+      "identify_noncompliant_or_excessive_charges",
+      "recommend_adjustments",
+      "prepare_memo"
+    ],
+    "workflow_evidence": [
+      {
+        "quote": "Review the attached law firm invoice against our billing guidelines and related correspondence, and prepare a memo identifying all non-compliant or excessive charges with recommended adjustments.",
+        "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Output: `research-charge-review-memo.docx`.",
+        "source_path": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+        "start_char": null,
+        "end_char": null
+      }
+    ],
+    "unknowns": [],
+    "confidence": 0.96
+  },
+  "raw_responses": [
+    "{\"schema_version\":\"0.1\",\"task_id\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\",\"task_type\":{\"original\":\"review\",\"normalized\":\"review\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"\\\"work_type\\\": \\\"review\\\"\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},\"actions\":[{\"original\":\"Review the attached law firm invoice\",\"normalized\":\"review_attached_invoice\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Review the attached law firm invoice\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"against our billing guidelines and related correspondence\",\"normalized\":\"compare_against_billing_guidelines_and_correspondence\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"against our billing guidelines and related correspondence\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"identifying all non-compliant or excessive charges\",\"normalized\":\"identify_noncompliant_or_excessive_charges\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"identifying all non-compliant or excessive charges\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"with recommended adjustments\",\"normalized\":\"recommend_adjustments\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"with recommended adjustments\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"prepare a memo\",\"normalized\":\"prepare_memo\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"prepare a memo\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]}],\"objects\":[{\"original\":\"attached law firm invoice\",\"normalized\":\"law_firm_invoice\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"attached law firm invoice\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"billing guidelines\",\"normalized\":\"billing_guidelines\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"billing guidelines\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"related correspondence\",\"normalized\":\"related_correspondence\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"related correspondence\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"non-compliant or excessive charges\",\"normalized\":\"noncompliant_or_excessive_charges\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"non-compliant or excessive charges\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]},{\"original\":\"recommended adjustments\",\"normalized\":\"recommended_adjustments\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"recommended adjustments\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]}],\"deliverables\":[{\"original\":\"research-charge-review-memo.docx\",\"normalized\":\"research-charge-review-memo.docx\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Output: `research-charge-review-memo.docx`.\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}]}],\"workflow_signature\":[\"review_attached_invoice\",\"compare_against_billing_guidelines_and_correspondence\",\"identify_noncompliant_or_excessive_charges\",\"recommend_adjustments\",\"prepare_memo\"],\"workflow_evidence\":[{\"quote\":\"Review the attached law firm invoice against our billing guidelines and related correspondence, and prepare a memo identifying all non-compliant or excessive charges with recommended adjustments.\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"},{\"quote\":\"Output: `research-charge-review-memo.docx`.\",\"source_path\":\"tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice\"}],\"unknowns\":[],\"confidence\":0.96}"
+  ],
+  "attempts": 1,
+  "failure_reason": null
+}

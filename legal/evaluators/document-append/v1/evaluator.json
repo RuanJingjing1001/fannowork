@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "legal.document-append.evaluator.v1",
+  "status": "reference_checks",
+  "checks": [
+    "required_artifacts",
+    "source_sha256_unchanged",
+    "appended_text_present",
+    "environment_reset"
+  ]
+}

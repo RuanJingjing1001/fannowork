@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fanno.local/schemas/bundle-manifest.schema.json",
+  "title": "Fanno Canonical Task Bundle Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "bundle_id",
+    "task",
+    "environment",
+    "action_catalog",
+    "evaluator",
+    "files",
+    "images",
+    "bundle_digest",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "bundle_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task": {
+      "type": "object",
+      "required": ["id", "schema_version"]
+    },
+    "environment": {
+      "type": "object",
+      "required": ["id", "version", "adapter"]
+    },
+    "action_catalog": {
+      "type": "object",
+      "required": ["schema_version", "action_count"]
+    },
+    "evaluator": {
+      "type": "object",
+      "required": ["id", "version", "adapter", "status"]
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256",
+          "size_bytes",
+          "role"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "digest",
+          "provenance"
+        ],
+        "properties": {
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "digest": {
+            "type": ["string", "null"]
+          },
+          "provenance": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "bundle_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

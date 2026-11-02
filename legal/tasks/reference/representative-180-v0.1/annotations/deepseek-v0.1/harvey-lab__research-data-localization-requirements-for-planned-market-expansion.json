@@ -1,0 +1,317 @@
+{
+  "task_id": "tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion",
+  "status": "success",
+  "prompt_version": "legal-workflow-extract-v0.1.0",
+  "requested_model": "deepseek-flash",
+  "returned_model": "deepseek-flash",
+  "extraction": {
+    "schema_version": "0.1",
+    "task_id": "tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion",
+    "task_type": {
+      "normalized": "research",
+      "original": "research",
+      "evidence": [
+        {
+          "quote": "\"work_type\": \"research\"",
+          "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+          "start_char": null,
+          "end_char": null
+        }
+      ],
+      "provenance": "source_fact"
+    },
+    "actions": [
+      {
+        "normalized": "review_source_documents",
+        "original": "Review the attached expansion proposal, client MSA, cloud provider agreement, outside counsel memo, audit summary, and infrastructure documents",
+        "evidence": [
+          {
+            "quote": "Review the attached expansion proposal, client MSA, cloud provider agreement, outside counsel memo, audit summary, and infrastructure documents",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "research_data_localization_requirements",
+        "original": "Research Data Localization Requirements for Planned Market Expansion into Brazil, Indonesia, Turkey, Nigeria, and Vietnam",
+        "evidence": [
+          {
+            "quote": "Research Data Localization Requirements for Planned Market Expansion into Brazil, Indonesia, Turkey, Nigeria, and Vietnam",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "perform_gap_analysis",
+        "original": "gap analysis",
+        "evidence": [
+          {
+            "quote": "gap analysis",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "assess_risks",
+        "original": "risk assessment",
+        "evidence": [
+          {
+            "quote": "risk assessment",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "develop_compliance_roadmap",
+        "original": "roadmap",
+        "evidence": [
+          {
+            "quote": "roadmap",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "produce_compliance_memo",
+        "original": "produce a formal data localization and residency compliance memo with gap analysis, risk assessment, and roadmap",
+        "evidence": [
+          {
+            "quote": "produce a formal data localization and residency compliance memo with gap analysis, risk assessment, and roadmap",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "output_docx",
+        "original": "Output: `data-localization-memo.docx`",
+        "evidence": [
+          {
+            "quote": "Output: `data-localization-memo.docx`.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "objects": [
+      {
+        "normalized": "expansion_proposal",
+        "original": "expansion proposal",
+        "evidence": [
+          {
+            "quote": "expansion proposal",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "client_msa",
+        "original": "client MSA",
+        "evidence": [
+          {
+            "quote": "client MSA",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "cloud_provider_agreement",
+        "original": "cloud provider agreement",
+        "evidence": [
+          {
+            "quote": "cloud provider agreement",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "outside_counsel_memo",
+        "original": "outside counsel memo",
+        "evidence": [
+          {
+            "quote": "outside counsel memo",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "audit_summary",
+        "original": "audit summary",
+        "evidence": [
+          {
+            "quote": "audit summary",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "infrastructure_documents",
+        "original": "infrastructure documents",
+        "evidence": [
+          {
+            "quote": "infrastructure documents",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "data_localization_and_residency_compliance_memo",
+        "original": "formal data localization and residency compliance memo",
+        "evidence": [
+          {
+            "quote": "formal data localization and residency compliance memo",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "gap_analysis",
+        "original": "gap analysis",
+        "evidence": [
+          {
+            "quote": "gap analysis",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "risk_assessment",
+        "original": "risk assessment",
+        "evidence": [
+          {
+            "quote": "risk assessment",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "roadmap",
+        "original": "roadmap",
+        "evidence": [
+          {
+            "quote": "roadmap",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "target_jurisdictions",
+        "original": "Brazil, Indonesia, Turkey, Nigeria, and Vietnam",
+        "evidence": [
+          {
+            "quote": "Brazil, Indonesia, Turkey, Nigeria, and Vietnam",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "deliverables": [
+      {
+        "normalized": "data_localization_memo_docx",
+        "original": "data-localization-memo.docx",
+        "evidence": [
+          {
+            "quote": "Output: `data-localization-memo.docx`.",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "workflow_signature": [
+      "review_source_documents",
+      "research_data_localization_requirements",
+      "perform_gap_analysis",
+      "assess_risks",
+      "develop_compliance_roadmap",
+      "produce_compliance_memo",
+      "output_docx"
+    ],
+    "workflow_evidence": [
+      {
+        "quote": "Research Data Localization Requirements for Planned Market Expansion into Brazil, Indonesia, Turkey, Nigeria, and Vietnam",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Review the attached expansion proposal, client MSA, cloud provider agreement, outside counsel memo, audit summary, and infrastructure documents; produce a formal data localization and residency compliance memo with gap analysis, risk assessment, and roadmap.",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Output: `data-localization-memo.docx`.",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json",
+        "start_char": null,
+        "end_char": null
+      }
+    ],
+    "unknowns": [
+      "Specific tools for document review or memo drafting are not specified.",
+      "Personnel roles assigned to conduct the review or research are not specified.",
+      "Whether additional intermediate work products are required is not specified."
+    ],
+    "confidence": 0.96
+  },
+  "raw_responses": [
+    "{\"schema_version\":\"0.1\",\"task_id\":\"tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion\",\"task_type\":{\"original\":\"research\",\"normalized\":\"research\",\"evidence\":[{\"quote\":\"\\\"work_type\\\": \\\"research\\\"\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},\"actions\":[{\"original\":\"Review the attached expansion proposal, client MSA, cloud provider agreement, outside counsel memo, audit summary, and infrastructure documents\",\"normalized\":\"review_source_documents\",\"evidence\":[{\"quote\":\"Review the attached expansion proposal, client MSA, cloud provider agreement, outside counsel memo, audit summary, and infrastructure documents\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"Research Data Localization Requirements for Planned Market Expansion into Brazil, Indonesia, Turkey, Nigeria, and Vietnam\",\"normalized\":\"research_data_localization_requirements\",\"evidence\":[{\"quote\":\"Research Data Localization Requirements for Planned Market Expansion into Brazil, Indonesia, Turkey, Nigeria, and Vietnam\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"gap analysis\",\"normalized\":\"perform_gap_analysis\",\"evidence\":[{\"quote\":\"gap analysis\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"risk assessment\",\"normalized\":\"assess_risks\",\"evidence\":[{\"quote\":\"risk assessment\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"roadmap\",\"normalized\":\"develop_compliance_roadmap\",\"evidence\":[{\"quote\":\"roadmap\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"produce a formal data localization and residency compliance memo with gap analysis, risk assessment, and roadmap\",\"normalized\":\"produce_compliance_memo\",\"evidence\":[{\"quote\":\"produce a formal data localization and residency compliance memo with gap analysis, risk assessment, and roadmap\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"Output: `data-localization-memo.docx`\",\"normalized\":\"output_docx\",\"evidence\":[{\"quote\":\"Output: `data-localization-memo.docx`.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"}],\"objects\":[{\"original\":\"expansion proposal\",\"normalized\":\"expansion_proposal\",\"evidence\":[{\"quote\":\"expansion proposal\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"client MSA\",\"normalized\":\"client_msa\",\"evidence\":[{\"quote\":\"client MSA\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"cloud provider agreement\",\"normalized\":\"cloud_provider_agreement\",\"evidence\":[{\"quote\":\"cloud provider agreement\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"outside counsel memo\",\"normalized\":\"outside_counsel_memo\",\"evidence\":[{\"quote\":\"outside counsel memo\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"audit summary\",\"normalized\":\"audit_summary\",\"evidence\":[{\"quote\":\"audit summary\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"infrastructure documents\",\"normalized\":\"infrastructure_documents\",\"evidence\":[{\"quote\":\"infrastructure documents\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"formal data localization and residency compliance memo\",\"normalized\":\"data_localization_and_residency_compliance_memo\",\"evidence\":[{\"quote\":\"formal data localization and residency compliance memo\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"gap analysis\",\"normalized\":\"gap_analysis\",\"evidence\":[{\"quote\":\"gap analysis\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"risk assessment\",\"normalized\":\"risk_assessment\",\"evidence\":[{\"quote\":\"risk assessment\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"roadmap\",\"normalized\":\"roadmap\",\"evidence\":[{\"quote\":\"roadmap\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"},{\"original\":\"Brazil, Indonesia, Turkey, Nigeria, and Vietnam\",\"normalized\":\"target_jurisdictions\",\"evidence\":[{\"quote\":\"Brazil, Indonesia, Turkey, Nigeria, and Vietnam\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"}],\"deliverables\":[{\"original\":\"data-localization-memo.docx\",\"normalized\":\"data_localization_memo_docx\",\"evidence\":[{\"quote\":\"Output: `data-localization-memo.docx`.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"provenance\":\"source_fact\"}],\"workflow_signature\":[\"review_source_documents\",\"research_data_localization_requirements\",\"perform_gap_analysis\",\"assess_risks\",\"develop_compliance_roadmap\",\"produce_compliance_memo\",\"output_docx\"],\"workflow_evidence\":[{\"quote\":\"Research Data Localization Requirements for Planned Market Expansion into Brazil, Indonesia, Turkey, Nigeria, and Vietnam\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null},{\"quote\":\"Review the attached expansion proposal, client MSA, cloud provider agreement, outside counsel memo, audit summary, and infrastructure documents; produce a formal data localization and residency compliance memo with gap analysis, risk assessment, and roadmap.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null},{\"quote\":\"Output: `data-localization-memo.docx`.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/data-privacy-cybersecurity/research-data-localization-requirements-for-planned-market-expansion/task.json\",\"start_char\":null,\"end_char\":null}],\"unknowns\":[\"Specific tools for document review or memo drafting are not specified.\",\"Personnel roles assigned to conduct the review or research are not specified.\",\"Whether additional intermediate work products are required is not specified.\"],\"confidence\":0.96}"
+  ],
+  "attempts": 1,
+  "failure_reason": null
+}

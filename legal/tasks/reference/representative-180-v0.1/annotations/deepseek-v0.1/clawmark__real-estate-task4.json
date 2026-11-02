@@ -1,0 +1,241 @@
+{
+  "task_id": "tasks/real_estate/task4",
+  "status": "success",
+  "prompt_version": "legal-workflow-extract-v0.1.0",
+  "requested_model": "deepseek-flash",
+  "returned_model": "deepseek-flash",
+  "extraction": {
+    "schema_version": "0.1",
+    "task_id": "tasks/real_estate/task4",
+    "task_type": {
+      "normalized": "transaction_risk_assessment_and_contract_review",
+      "original": "Transaction risk assessment and contract review",
+      "evidence": [
+        {
+          "quote": "Transaction risk assessment and contract review -- multi-stage task.",
+          "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+          "start_char": null,
+          "end_char": null
+        }
+      ],
+      "provenance": "source_fact"
+    },
+    "actions": [
+      {
+        "normalized": "check_email_inbox",
+        "original": "Check your email inbox at xiao_an@agency.com",
+        "evidence": [
+          {
+            "quote": "Check your email inbox at xiao_an@agency.com",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "review_input_materials",
+        "original": "review all materials in input/",
+        "evidence": [
+          {
+            "quote": "review all materials in input/",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "perform_full_file_review",
+        "original": "full file review",
+        "evidence": [
+          {
+            "quote": "full file review",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "handle_multi_party_responses",
+        "original": "multi-party responses",
+        "evidence": [
+          {
+            "quote": "multi-party responses",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "support_buyer_anxiety_and_decision",
+        "original": "buyer anxiety & decision support",
+        "evidence": [
+          {
+            "quote": "buyer anxiety & decision support",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "assess_transaction_risk",
+        "original": "Transaction risk assessment",
+        "evidence": [
+          {
+            "quote": "Transaction risk assessment and contract review -- multi-stage task.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "review_contract",
+        "original": "contract review",
+        "evidence": [
+          {
+            "quote": "Transaction risk assessment and contract review -- multi-stage task.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "objects": [
+      {
+        "normalized": "email_inbox_xiao_an_at_agency_com",
+        "original": "your email inbox at xiao_an@agency.com",
+        "evidence": [
+          {
+            "quote": "Check your email inbox at xiao_an@agency.com",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "input_materials",
+        "original": "all materials in input/",
+        "evidence": [
+          {
+            "quote": "review all materials in input/",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "contract",
+        "original": "contract",
+        "evidence": [
+          {
+            "quote": "contract review",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "transaction",
+        "original": "Transaction",
+        "evidence": [
+          {
+            "quote": "Transaction risk assessment and contract review -- multi-stage task.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "buyer_anxiety",
+        "original": "buyer anxiety",
+        "evidence": [
+          {
+            "quote": "buyer anxiety & decision support",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "deliverables": [
+      {
+        "normalized": "english_language_outputs",
+        "original": "All your outputs",
+        "evidence": [
+          {
+            "quote": "All your outputs must be in English.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "workflow_signature": [
+      "check_email_inbox",
+      "review_input_materials",
+      "perform_full_file_review",
+      "handle_multi_party_responses",
+      "support_buyer_anxiety_and_decision",
+      "assess_transaction_risk",
+      "review_contract"
+    ],
+    "workflow_evidence": [
+      {
+        "quote": "Check your email inbox at xiao_an@agency.com and review all materials in input/.",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "3 stages: full file review -> multi-party responses -> buyer anxiety & decision support",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "All your outputs must be in English.",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py",
+        "start_char": null,
+        "end_char": null
+      }
+    ],
+    "unknowns": [
+      "The contents, file names, and formats of materials in input/ are not provided in the task text.",
+      "The identities and number of parties involved in multi-party responses are not provided.",
+      "No specific deliverable filenames or document formats are stated beyond requiring English-language outputs.",
+      "The emails in xiao_an@agency.com are not included in the task text.",
+      "Specific actions in Notion, Google Sheets, or Calendar are not described in the task text."
+    ],
+    "confidence": 0.85
+  },
+  "raw_responses": [
+    "{\"schema_version\":\"0.1\",\"task_id\":\"tasks/real_estate/task4\",\"task_type\":{\"provenance\":\"source_fact\",\"original\":\"Transaction risk assessment and contract review\",\"normalized\":\"transaction_risk_assessment_and_contract_review\",\"evidence\":[{\"quote\":\"Transaction risk assessment and contract review -- multi-stage task.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},\"actions\":[{\"provenance\":\"source_fact\",\"original\":\"Check your email inbox at xiao_an@agency.com\",\"normalized\":\"check_email_inbox\",\"evidence\":[{\"quote\":\"Check your email inbox at xiao_an@agency.com\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"review all materials in input/\",\"normalized\":\"review_input_materials\",\"evidence\":[{\"quote\":\"review all materials in input/\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"full file review\",\"normalized\":\"perform_full_file_review\",\"evidence\":[{\"quote\":\"full file review\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"multi-party responses\",\"normalized\":\"handle_multi_party_responses\",\"evidence\":[{\"quote\":\"multi-party responses\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"buyer anxiety & decision support\",\"normalized\":\"support_buyer_anxiety_and_decision\",\"evidence\":[{\"quote\":\"buyer anxiety & decision support\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"Transaction risk assessment\",\"normalized\":\"assess_transaction_risk\",\"evidence\":[{\"quote\":\"Transaction risk assessment and contract review -- multi-stage task.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"contract review\",\"normalized\":\"review_contract\",\"evidence\":[{\"quote\":\"Transaction risk assessment and contract review -- multi-stage task.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]}],\"objects\":[{\"provenance\":\"source_fact\",\"original\":\"your email inbox at xiao_an@agency.com\",\"normalized\":\"email_inbox_xiao_an_at_agency_com\",\"evidence\":[{\"quote\":\"Check your email inbox at xiao_an@agency.com\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"all materials in input/\",\"normalized\":\"input_materials\",\"evidence\":[{\"quote\":\"review all materials in input/\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"contract\",\"normalized\":\"contract\",\"evidence\":[{\"quote\":\"contract review\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"Transaction\",\"normalized\":\"transaction\",\"evidence\":[{\"quote\":\"Transaction risk assessment and contract review -- multi-stage task.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]},{\"provenance\":\"source_fact\",\"original\":\"buyer anxiety\",\"normalized\":\"buyer_anxiety\",\"evidence\":[{\"quote\":\"buyer anxiety & decision support\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]}],\"deliverables\":[{\"provenance\":\"source_fact\",\"original\":\"All your outputs\",\"normalized\":\"english_language_outputs\",\"evidence\":[{\"quote\":\"All your outputs must be in English.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}]}],\"workflow_signature\":[\"check_email_inbox\",\"review_input_materials\",\"perform_full_file_review\",\"handle_multi_party_responses\",\"support_buyer_anxiety_and_decision\",\"assess_transaction_risk\",\"review_contract\"],\"workflow_evidence\":[{\"quote\":\"Check your email inbox at xiao_an@agency.com and review all materials in input/.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"},{\"quote\":\"3 stages: full file review -> multi-party responses -> buyer anxiety & decision support\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"},{\"quote\":\"All your outputs must be in English.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task4/task.py\"}],\"unknowns\":[\"The contents, file names, and formats of materials in input/ are not provided in the task text.\",\"The identities and number of parties involved in multi-party responses are not provided.\",\"No specific deliverable filenames or document formats are stated beyond requiring English-language outputs.\",\"The emails in xiao_an@agency.com are not included in the task text.\",\"Specific actions in Notion, Google Sheets, or Calendar are not described in the task text.\"],\"confidence\":0.85}"
+  ],
+  "attempts": 1,
+  "failure_reason": null
+}

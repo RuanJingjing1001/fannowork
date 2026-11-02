@@ -1,0 +1,54 @@
+{
+  "actors": {
+    "agent": {
+      "roles": [
+        "legal_invoice_reviewer"
+      ]
+    },
+    "evaluator": {
+      "roles": [
+        "trusted_evaluator"
+      ]
+    }
+  },
+  "collections": [],
+  "email": {
+    "accounts": {
+      "agent": {
+        "address": "dhargrove@hargrovelinden.com",
+        "display_name": "Diane K. Hargrove",
+        "password": "agent-test-password"
+      },
+      "marcus_holt": {
+        "address": "mholt@terraverde-env.com",
+        "display_name": "Marcus Holt",
+        "password": "marcus-test-password"
+      },
+      "priya_anand": {
+        "address": "panand@terraverde-env.com",
+        "display_name": "Priya Anand",
+        "password": "priya-test-password"
+      }
+    },
+    "messages": [
+      {
+        "body": "Diane,\n\nThank you for the firm's continued work on the Cascade matter, and congratulations to your team on getting TerraVerde's Motion for Partial Summary Judgment on the MTCA claim filed on June 14. I have now completed my review of the May and June 2024 invoices for *Cascade Development Group, LLC v. TerraVerde Environmental Solutions, Inc.*, Case No. 2:24-cv-00318-RSL (W.D. Wash.), and I want to flag several concerns regarding legal research charges before the July billing period opens.\n\nFirst, I have noticed a concerning upward trend in research charges across the May and June invoices. In particular, the June 2024 invoice shows research charges approaching or pushing against the 12% cap established by Section 6.2 of TerraVerde's Outside Counsel Billing Guidelines (last updated November 2023), which provides that \"[t]otal legal research charges shall not exceed 12% of total monthly professional fees without prior written approval from TerraVerde's Deputy General Counsel.\" No such prior written approval has been requested or granted for any exceedance of the 12% cap. As you know, the Billing Guidelines were incorporated by reference into the engagement letter dated January 22, 2024, and compliance is expected. I ask that the firm ensure the July 2024 invoice comes in at or below the 12% research cap, and that if the firm anticipates needing to exceed it, written pre-approval must be obtained from me before the charges are incurred — not after the fact.\n\nSecond, I observed what appears to be duplicative research on MTCA liability and contractor defense issues in the June invoice. Specifically, the invoice reflects 8.0 hours from Tyler Wendt researching \"Washington MTCA summary judgment standards and contractor liability\" and 6.5 hours from Kenji Takahashi researching \"MTCA contractor liability and strict liability framework\" — a combined 14.5 hours of MTCA-related research across two timekeepers. I appreciate that the summary judgment motion required substantial research, and some degree of parallel work may be justified, but the descriptions as written suggest overlapping rather than distinct sub-issues. Section 6.4 of the Billing Guidelines prohibits multiple attorneys from billing for research on the same legal issue during the same billing period unless the matter involves genuinely distinct sub-issues requiring different expertise. Going forward, if multiple attorneys are researching aspects of the same legal topic, the time entries must clearly delineate the distinct sub-issues each attorney is addressing so TerraVerde can assess whether the work is genuinely non-duplicative. I also note that the reply brief on the pending summary judgment motion should draw on research already completed in May and June; significant additional MTCA research in July should not be necessary absent new developments.\n\nThird, as a general reminder, please ensure your billing team remains attentive to the following provisions: Section 6.3 (partners should not bill for legal research — research must be delegated to associates, and any exceptional partner-level research must be written off or billed at the senior associate rate with an explanatory notation); Section 6.5 (research entries must identify the specific legal issue, and block-billed entries combining research with drafting must allocate at least 50% of time to the non-research component); and Section 4.1 (research tasks should be assigned to the most junior qualified attorney). I want to ensure we are aligned on these expectations before the July invoice period closes so the firm has adequate time to adjust its practices. I recognize the Cascade matter is in an active phase — fact discovery has been open since March 15, 2024, and the November 29, 2024 discovery cutoff lies ahead — and I appreciate the volume of work being done, but cost discipline on research remains important.\n\nFinally, I am aware the firm is also handling the related DOE regulatory matter (Enforcement Action No. ECY-2024-0042) involving the same Millbrook Parcel site and overlapping legal issues. Please keep in mind Section 6.6 regarding inter-matter research: research benefiting multiple TerraVerde matters should be billed only once and allocated to the primary matter. I ask that the firm be mindful of this as both matters proceed in parallel.\n\nPlease confirm receipt of this email and that your billing team has been notified of these expectations. I am happy to schedule a brief call if you would like to discuss any of these points. TerraVerde values the firm's work on this matter and our longstanding relationship, and my goal is simply to ensure billing transparency and compliance so that invoices can be approved promptly without the need for time-consuming adjustments after the fact. I look forward to seeing the July invoice in compliance with the guidelines.\n\nBest regards,\nMarcus\n\nMarcus Holt\nDeputy General Counsel\nTerraVerde Environmental Solutions, Inc.\n2400 SW River Parkway, Suite 1100\nPortland, OR 97201\nTel: (503) 814-2260\nmholt@terraverde-env.com\n",
+        "cc_accounts": [
+          "priya_anand"
+        ],
+        "date": "Fri, 28 Jun 2024 04:17:00 -0000",
+        "from_account": "marcus_holt",
+        "source": {
+          "path": "assets/holt-email-research-concerns.eml",
+          "type": "imported_eml"
+        },
+        "subject": "Cascade Litigation (Case No. 2:24-cv-00318-RSL) — Research Billing Concerns and Compliance with Outside Counsel Guidelines",
+        "to_accounts": [
+          "agent"
+        ]
+      }
+    ]
+  },
+  "policies": [],
+  "schema_version": 1
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "actors": {
+    "agent": {
+      "roles": ["legal_assistant"]
+    },
+    "evaluator": {
+      "roles": ["evaluator"]
+    }
+  },
+  "collections": [
+    {
+      "id": "transactions",
+      "name": "transactions",
+      "records": [
+        {
+          "id": "DOC-DEMO-001",
+          "fields": {
+            "client": "Example Manufacturing Ltd.",
+            "status": "under_review",
+            "risk_notes": "",
+            "agreed_price": 0
+          }
+        }
+      ]
+    }
+  ],
+  "email": {
+    "accounts": {
+        "agent": {
+            "address": "legal.assistant@fanno.test",
+            "password": "agent-password",
+            "display_name": "Legal Assistant"
+        },
+        "client": {
+            "address": "client@fanno.test",
+            "password": "client-password",
+            "display_name": "Client"
+        },
+        "lawyer": {
+            "address": "lawyer@fanno.test",
+            "password": "lawyer-password",
+            "display_name": "External Counsel"
+        }
+    },
+    "messages": [
+        {
+            "from_account": "client",
+            "to_accounts": [
+                "agent"
+            ],
+            "subject": "Invoice review instructions",
+            "body": "Please review the attached billing materials and report any duplicative research charges.",
+            "date": "Thu, 29 Oct 2026 09:00:00 +0800"
+        }
+    ]
+},
+  "policies": [
+    {
+      "actor": "agent",
+      "collection": "transactions",
+      "operation": "get",
+      "allowed_fields": ["*"]
+    },
+    {
+      "actor": "agent",
+      "collection": "transactions",
+      "operation": "query",
+      "allowed_fields": ["*"]
+    },
+    {
+      "actor": "agent",
+      "collection": "transactions",
+      "operation": "update",
+      "allowed_fields": ["status", "risk_notes"]
+    }
+  ]
+}

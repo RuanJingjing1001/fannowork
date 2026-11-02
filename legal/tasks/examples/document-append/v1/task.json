@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "legal.document-append.example.v1",
+  "title": "Append a legal approval condition",
+  "instruction": "Preserve the source contract, append the required legal-approval paragraph to a new DOCX, and render before/after PDFs.",
+  "environment_id": "legal.office.v1",
+  "inputs": [
+    {
+      "path": "source_contract.docx",
+      "source": "assets/source_contract.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "d69b522cef8d829b1b0240c8a2550995ddfdb0096b69c70f88ad00237045d1f0"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "original_contract.pdf",
+      "media_type": "application/pdf",
+      "required": true
+    },
+    {
+      "path": "edited_contract.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "required": true
+    },
+    {
+      "path": "edited_contract.pdf",
+      "media_type": "application/pdf",
+      "required": true
+    }
+  ],
+  "verifier": {
+    "adapter": "required_artifacts",
+    "config": {}
+  },
+  "initial_state_file": "seed.json",
+  "taxonomy": {
+    "domain": "legal",
+    "capability": "document_editing"
+  },
+  "metadata": {
+    "purpose": "inspectable environment example",
+    "evaluator": "document-append/v1"
+  }
+}

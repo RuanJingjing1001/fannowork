@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "legal.litigation-invoice-review.evaluator.v1",
+  "version": "1.0.0",
+  "adapter": "reward_engine",
+  "status": "baseline_structural",
+  "policy": {
+    "aggregation": "weighted_mean",
+    "pass_threshold": 0.75,
+    "hard_failure_reward": 0.0
+  },
+  "checks": [
+    {
+      "id": "required_review_memo",
+      "type": "required_artifacts",
+      "component": "artifact",
+      "weight": 0.1,
+      "hard": true,
+      "config": {
+        "paths": [
+          "research-charge-review-memo.docx"
+        ]
+      }
+    },
+    {
+      "id": "review_memo_is_valid_docx",
+      "type": "docx_openable",
+      "component": "artifact",
+      "weight": 0.1,
+      "hard": true,
+      "config": {
+        "path": "research-charge-review-memo.docx"
+      }
+    },
+    {
+      "id": "source_inputs_unchanged",
+      "type": "input_hashes_unchanged",
+      "component": "safety",
+      "weight": 0.0,
+      "hard": true,
+      "config": {}
+    },
+    {
+      "id": "review_memo_has_minimum_structure",
+      "type": "document_contains",
+      "component": "business_result",
+      "weight": 0.8,
+      "hard": false,
+      "config": {
+        "path": "research-charge-review-memo.docx",
+        "min_characters": 500,
+        "case_sensitive": false,
+        "all_terms": [
+          "research",
+          "adjustment"
+        ],
+        "any_terms": [
+          "billing guidelines",
+          "engagement letter",
+          "invoice"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "task_id": "legal.harvey-lab.litigation-invoice-review.v1",
+    "semantic_reward_status": "not_implemented",
+    "limitations": [
+      "This evaluator validates artifact integrity and minimum content only.",
+      "It does not yet validate every invoice finding or monetary adjustment.",
+      "It must not be represented as a final trusted semantic evaluator."
+    ]
+  }
+}

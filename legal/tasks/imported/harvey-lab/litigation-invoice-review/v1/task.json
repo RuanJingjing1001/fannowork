@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "legal.harvey-lab.litigation-invoice-review.v1",
+  "title": "Litigation Invoice Research Charge Review",
+  "instruction": "Review the July 2024 law-firm invoice against the billing guidelines, engagement terms, prior-month invoice summary, related-matter summary, and the client correspondence available in the configured mailbox. Identify all supported non-compliant, duplicative, excessive, or incorrectly calculated research charges. For each issue, cite the relevant source material, explain the basis for the finding, and calculate a supported monetary adjustment where possible. Consolidate the recommended adjustments and save the final review memo as outputs/research-charge-review-memo.docx. Do not modify any file under inputs/.",
+  "environment_id": "legal.office.v1",
+  "inputs": [
+    {
+      "path": "hl-july-2024-invoice.xlsx",
+      "source": "assets/hl-july-2024-invoice.xlsx",
+      "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "04be162ba4f1a616682638d0aaa03348f776147c5a7bf5a69fd6fd8bba010145"
+    },
+    {
+      "path": "terraverde-billing-guidelines.docx",
+      "source": "assets/terraverde-billing-guidelines.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "1f959ac43d41ce889caf0e06697a289d6b14adfc55bef9ded06f1f97e8b1b7ef"
+    },
+    {
+      "path": "engagement-letter-cascade.docx",
+      "source": "assets/engagement-letter-cascade.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "88a5025a19840a13ffe608f9e65d5d2e327b2fd295436005fe6ecc2701c703cb"
+    },
+    {
+      "path": "hl-june-2024-invoice-summary.docx",
+      "source": "assets/hl-june-2024-invoice-summary.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "9f89d5dd647cf381007a33c16aab3fd69ce2ad91b9f160418beec6bdc48ca881"
+    },
+    {
+      "path": "doe-matter-july-2024-summary.docx",
+      "source": "assets/doe-matter-july-2024-summary.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sha256": "a861f080fe6e6586b06b39e4f5777f04135882c6a1031cfe4f6d1897deb22ea2"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "research-charge-review-memo.docx",
+      "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "required": true
+    }
+  ],
+  "verifier": {
+    "adapter": "required_artifacts",
+    "config": {
+      "status": "temporary",
+      "note": "This currently checks only whether the required DOCX exists. A task-specific semantic evaluator must be added before this task is used for trusted reward."
+    }
+  },
+  "initial_state_file": "seed.json",
+  "taxonomy": {
+    "domain": "legal",
+    "practice_area": "litigation_dispute_resolution",
+    "workflow_family": "legal_invoice_audit",
+    "task_type": "invoice_review",
+    "primary_capabilities": [
+      "filesystem",
+      "document",
+      "spreadsheet",
+      "email",
+      "calculation"
+    ]
+  },
+  "metadata": {
+    "source_benchmark": "harvey-lab",
+    "source_task_id": "tasks/litigation-dispute-resolution/identify-excessive-or-duplicative-research-charges-in-litigation-invoice",
+    "source_revision": "97810facfd447317b57f6dd02a1469561c573d79",
+    "reuse_mode": "imported_compatibility_task",
+    "provenance_file": "provenance.json",
+    "email_source_asset": "assets/holt-email-research-concerns.eml",
+    "blueprint": "legal/task-blueprints/representative-180-v0.1/litigation-invoice-review.yaml",
+    "runtime_status": "partially_supported",
+    "semantic_evaluator_status": "not_implemented"
+  }
+}

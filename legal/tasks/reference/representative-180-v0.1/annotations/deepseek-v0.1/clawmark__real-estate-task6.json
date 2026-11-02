@@ -1,0 +1,278 @@
+{
+  "task_id": "tasks/real_estate/task6",
+  "status": "success",
+  "prompt_version": "legal-workflow-extract-v0.1.0",
+  "requested_model": "deepseek-flash",
+  "returned_model": "deepseek-flash",
+  "extraction": {
+    "schema_version": "0.1",
+    "task_id": "tasks/real_estate/task6",
+    "task_type": {
+      "normalized": "loi_clause_comparison_and_negotiation_prioritisation",
+      "original": "LOI clause comparison and negotiation prioritisation",
+      "evidence": [
+        {
+          "quote": "LOI clause comparison and negotiation prioritisation",
+          "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+          "start_char": null,
+          "end_char": null
+        }
+      ],
+      "provenance": "source_fact"
+    },
+    "actions": [
+      {
+        "normalized": "review_loi",
+        "original": "LOI review",
+        "evidence": [
+          {
+            "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "compare_three_lois",
+        "original": "Compare three LOIs for Shanlan Tea House",
+        "evidence": [
+          {
+            "quote": "Compare three LOIs for Shanlan Tea House and prioritise negotiation points.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prioritise_negotiation_points",
+        "original": "prioritise negotiation points",
+        "evidence": [
+          {
+            "quote": "Compare three LOIs for Shanlan Tea House and prioritise negotiation points.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "review_lawyer_redline",
+        "original": "lawyer redline",
+        "evidence": [
+          {
+            "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "model_inference"
+      },
+      {
+        "normalized": "apply_ops_rules",
+        "original": "ops rules",
+        "evidence": [
+          {
+            "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "model_inference"
+      },
+      {
+        "normalized": "prepare_final_recommendation",
+        "original": "final recommendation",
+        "evidence": [
+          {
+            "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "model_inference"
+      }
+    ],
+    "objects": [
+      {
+        "normalized": "three_lois_for_shanlan_tea_house",
+        "original": "three LOIs for Shanlan Tea House",
+        "evidence": [
+          {
+            "quote": "Compare three LOIs for Shanlan Tea House and prioritise negotiation points.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "loi_clauses",
+        "original": "LOI clauses",
+        "evidence": [
+          {
+            "quote": "LOI clause comparison and negotiation prioritisation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "negotiation_points",
+        "original": "negotiation points",
+        "evidence": [
+          {
+            "quote": "Compare three LOIs for Shanlan Tea House and prioritise negotiation points.",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "lawyer_redline",
+        "original": "lawyer redline",
+        "evidence": [
+          {
+            "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "ops_rules",
+        "original": "ops rules",
+        "evidence": [
+          {
+            "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "filesystem_email_notion_google_sheets",
+        "original": "Environments: filesystem, email, notion, google_sheets",
+        "evidence": [
+          {
+            "quote": "Environments: filesystem, email, notion, google_sheets",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "deliverables": [
+      {
+        "normalized": "loi_clause_comparison",
+        "original": "LOI clause comparison",
+        "evidence": [
+          {
+            "quote": "LOI clause comparison and negotiation prioritisation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "negotiation_prioritisation",
+        "original": "negotiation prioritisation",
+        "evidence": [
+          {
+            "quote": "LOI clause comparison and negotiation prioritisation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "final_recommendation",
+        "original": "final recommendation",
+        "evidence": [
+          {
+            "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+            "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "model_inference"
+      }
+    ],
+    "workflow_signature": [
+      "review_loi",
+      "compare_three_lois",
+      "prioritise_negotiation_points",
+      "review_lawyer_redline",
+      "apply_ops_rules",
+      "prepare_final_recommendation"
+    ],
+    "workflow_evidence": [
+      {
+        "quote": "LOI clause comparison and negotiation prioritisation — multi-environment multi-stage task.",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Environments: filesystem, email, notion, google_sheets",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "3 stages: LOI review → lawyer redline + ops rules → final recommendation",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Compare three LOIs for Shanlan Tea House and prioritise negotiation points.",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "All your outputs must be in English.",
+        "source_path": "/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py",
+        "start_char": null,
+        "end_char": null
+      }
+    ],
+    "unknowns": [
+      "Specific LOI clauses to compare are not specified.",
+      "Specific negotiation points and prioritisation criteria are not specified.",
+      "The required content, format, and location of the final recommendation are not specified.",
+      "How filesystem, email, notion, and google_sheets are used is not specified.",
+      "The contents of the ops rules are not specified."
+    ],
+    "confidence": 0.83
+  },
+  "raw_responses": [
+    "{\"schema_version\":\"0.1\",\"task_id\":\"tasks/real_estate/task6\",\"task_type\":{\"original\":\"LOI clause comparison and negotiation prioritisation\",\"normalized\":\"loi_clause_comparison_and_negotiation_prioritisation\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"LOI clause comparison and negotiation prioritisation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},\"actions\":[{\"original\":\"LOI review\",\"normalized\":\"review_loi\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"Compare three LOIs for Shanlan Tea House\",\"normalized\":\"compare_three_lois\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Compare three LOIs for Shanlan Tea House and prioritise negotiation points.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"prioritise negotiation points\",\"normalized\":\"prioritise_negotiation_points\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Compare three LOIs for Shanlan Tea House and prioritise negotiation points.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"lawyer redline\",\"normalized\":\"review_lawyer_redline\",\"provenance\":\"model_inference\",\"evidence\":[{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"ops rules\",\"normalized\":\"apply_ops_rules\",\"provenance\":\"model_inference\",\"evidence\":[{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"final recommendation\",\"normalized\":\"prepare_final_recommendation\",\"provenance\":\"model_inference\",\"evidence\":[{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]}],\"objects\":[{\"original\":\"three LOIs for Shanlan Tea House\",\"normalized\":\"three_lois_for_shanlan_tea_house\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Compare three LOIs for Shanlan Tea House and prioritise negotiation points.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"LOI clauses\",\"normalized\":\"loi_clauses\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"LOI clause comparison and negotiation prioritisation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"negotiation points\",\"normalized\":\"negotiation_points\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Compare three LOIs for Shanlan Tea House and prioritise negotiation points.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"lawyer redline\",\"normalized\":\"lawyer_redline\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"ops rules\",\"normalized\":\"ops_rules\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"Environments: filesystem, email, notion, google_sheets\",\"normalized\":\"filesystem_email_notion_google_sheets\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Environments: filesystem, email, notion, google_sheets\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]}],\"deliverables\":[{\"original\":\"LOI clause comparison\",\"normalized\":\"loi_clause_comparison\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"LOI clause comparison and negotiation prioritisation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"negotiation prioritisation\",\"normalized\":\"negotiation_prioritisation\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"LOI clause comparison and negotiation prioritisation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]},{\"original\":\"final recommendation\",\"normalized\":\"final_recommendation\",\"provenance\":\"model_inference\",\"evidence\":[{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}]}],\"workflow_signature\":[\"review_loi\",\"compare_three_lois\",\"prioritise_negotiation_points\",\"review_lawyer_redline\",\"apply_ops_rules\",\"prepare_final_recommendation\"],\"workflow_evidence\":[{\"quote\":\"LOI clause comparison and negotiation prioritisation — multi-environment multi-stage task.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"},{\"quote\":\"Environments: filesystem, email, notion, google_sheets\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"},{\"quote\":\"3 stages: LOI review → lawyer redline + ops rules → final recommendation\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"},{\"quote\":\"Compare three LOIs for Shanlan Tea House and prioritise negotiation points.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"},{\"quote\":\"All your outputs must be in English.\",\"source_path\":\"/data1/rjj/environment-catalog/upstream/clawmark/tasks/real_estate/task6/task.py\"}],\"unknowns\":[\"Specific LOI clauses to compare are not specified.\",\"Specific negotiation points and prioritisation criteria are not specified.\",\"The required content, format, and location of the final recommendation are not specified.\",\"How filesystem, email, notion, and google_sheets are used is not specified.\",\"The contents of the ops rules are not specified.\"],\"confidence\":0.83}"
+  ],
+  "attempts": 1,
+  "failure_reason": null
+}

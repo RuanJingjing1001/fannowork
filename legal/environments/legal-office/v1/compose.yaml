@@ -1,0 +1,29 @@
+name: fanno-legal-office-v1
+
+services:
+  legal-office:
+    build:
+      context: ../../../..
+      dockerfile: legal/environments/legal-office/v1/images/runtime/Dockerfile
+    image: fanno-legal-office:runtime-v0.7
+
+    user: "${FANNO_UID:-10001}:${FANNO_GID:-10001}"
+
+    environment:
+      HOME: /tmp/fanno-home
+      FANNO_TRACE_CONSOLE: "${FANNO_TRACE_CONSOLE:-1}"
+
+    volumes:
+      - ../../../runs:/app/legal/runs
+
+    tmpfs:
+      - /tmp/fanno-home:uid=${FANNO_UID:-10001},gid=${FANNO_GID:-10001},mode=0700
+
+    command:
+      - python
+      - -m
+      - unittest
+      - discover
+      - -s
+      - legal/tests
+      - -v

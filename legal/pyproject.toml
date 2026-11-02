@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fanno-legal"
+version = "0.1.0"
+description = "Legal workflow environment plugin for fanno-work"
+requires-python = ">=3.11"
+dependencies = [
+    "fanno-work==0.1.0",
+    "pypdf>=5,<7",
+    "caldav>=2,<3"
+]
+
+[project.scripts]
+fanno-legal-runtime = "fanno_legal.runtime.entrypoint:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

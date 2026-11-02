@@ -1,0 +1,512 @@
+{
+  "task_id": "tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05",
+  "status": "success",
+  "prompt_version": "legal-workflow-extract-v0.1.0",
+  "requested_model": "deepseek-flash",
+  "returned_model": "deepseek-flash",
+  "extraction": {
+    "schema_version": "0.1",
+    "task_id": "tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05",
+    "task_type": {
+      "normalized": "contract redline",
+      "original": "Redline Trademark License Agreement First Turn",
+      "evidence": [
+        {
+          "quote": "Redline Trademark License Agreement First Turn",
+          "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+          "start_char": null,
+          "end_char": null
+        }
+      ],
+      "provenance": "source_fact"
+    },
+    "actions": [
+      {
+        "normalized": "use provided instruction email, strategy guidance, and negotiation playbook",
+        "original": "Using the provided instruction email, strategy guidance, and negotiation playbook",
+        "evidence": [
+          {
+            "quote": "Using the provided instruction email, strategy guidance, and negotiation playbook",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prepare counter-turn redline",
+        "original": "prepare a counter-turn redline of the agreement",
+        "evidence": [
+          {
+            "quote": "prepare a counter-turn redline of the agreement",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "respond to every tracked change in licensee markup, accepting, rejecting, or proposing counter-language for each change",
+        "original": "responding to every tracked change in the licensee's markup (accepting, rejecting, or proposing counter-language for each)",
+        "evidence": [
+          {
+            "quote": "responding to every tracked change in the licensee's markup (accepting, rejecting, or proposing counter-language for each)",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "validate financial arithmetic against financial model",
+        "original": "Validate all financial arithmetic against the financial model",
+        "evidence": [
+          {
+            "quote": "Validate all financial arithmetic against the financial model",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "reference supporting documents to substantiate positions",
+        "original": "reference the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule) to substantiate your positions",
+        "evidence": [
+          {
+            "quote": "reference the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule) to substantiate your positions",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prepare professional cover note",
+        "original": "prepare a professional cover note",
+        "evidence": [
+          {
+            "quote": "prepare a professional cover note",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "summarize licensor positions on each contested point",
+        "original": "summarizing the licensor's positions on each contested point",
+        "evidence": [
+          {
+            "quote": "summarizing the licensor's positions on each contested point",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "explain rationale",
+        "original": "explaining the rationale",
+        "evidence": [
+          {
+            "quote": "explaining the rationale",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "rebut licensee asserted benchmarks",
+        "original": "rebutting the licensee's asserted benchmarks",
+        "evidence": [
+          {
+            "quote": "rebutting the licensee's asserted benchmarks",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "objects": [
+      {
+        "normalized": "trademark license agreement",
+        "original": "Trademark License Agreement",
+        "evidence": [
+          {
+            "quote": "Redline Trademark License Agreement First Turn",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "licensee markup",
+        "original": "the licensee's markup",
+        "evidence": [
+          {
+            "quote": "the licensee's markup",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "tracked changes",
+        "original": "every tracked change",
+        "evidence": [
+          {
+            "quote": "every tracked change in the licensee's markup",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "counter-language",
+        "original": "counter-language",
+        "evidence": [
+          {
+            "quote": "proposing counter-language for each",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "financial arithmetic",
+        "original": "financial arithmetic",
+        "evidence": [
+          {
+            "quote": "all financial arithmetic",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "financial model",
+        "original": "the financial model",
+        "evidence": [
+          {
+            "quote": "the financial model",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "supporting documents",
+        "original": "the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule)",
+        "evidence": [
+          {
+            "quote": "the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule)",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "compliance methodology",
+        "original": "compliance methodology",
+        "evidence": [
+          {
+            "quote": "compliance methodology",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "territory memo",
+        "original": "territory memo",
+        "evidence": [
+          {
+            "quote": "territory memo",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "royalty benchmarks",
+        "original": "royalty benchmarks",
+        "evidence": [
+          {
+            "quote": "royalty benchmarks",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "business plan",
+        "original": "business plan",
+        "evidence": [
+          {
+            "quote": "business plan",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "registration schedule",
+        "original": "registration schedule",
+        "evidence": [
+          {
+            "quote": "registration schedule",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "instruction email",
+        "original": "the provided instruction email",
+        "evidence": [
+          {
+            "quote": "the provided instruction email",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "strategy guidance",
+        "original": "strategy guidance",
+        "evidence": [
+          {
+            "quote": "strategy guidance",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "negotiation playbook",
+        "original": "negotiation playbook",
+        "evidence": [
+          {
+            "quote": "negotiation playbook",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "cover note",
+        "original": "professional cover note",
+        "evidence": [
+          {
+            "quote": "professional cover note",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "licensor positions",
+        "original": "the licensor's positions",
+        "evidence": [
+          {
+            "quote": "the licensor's positions",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "contested points",
+        "original": "each contested point",
+        "evidence": [
+          {
+            "quote": "each contested point",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "rationale",
+        "original": "the rationale",
+        "evidence": [
+          {
+            "quote": "the rationale",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "licensee asserted benchmarks",
+        "original": "the licensee's asserted benchmarks",
+        "evidence": [
+          {
+            "quote": "the licensee's asserted benchmarks",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "deliverables": [
+      {
+        "normalized": "counter-turn redline DOCX",
+        "original": "counter-turn-redline-v3-rh.docx",
+        "evidence": [
+          {
+            "quote": "counter-turn-redline-v3-rh.docx",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "cover note DOCX",
+        "original": "cover-note-to-kwon-park.docx",
+        "evidence": [
+          {
+            "quote": "cover-note-to-kwon-park.docx",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "workflow_signature": [
+      "use provided instruction email, strategy guidance, and negotiation playbook",
+      "prepare counter-turn redline",
+      "respond to every tracked change in licensee markup",
+      "accept, reject, or propose counter-language for each change",
+      "validate financial arithmetic against financial model",
+      "reference supporting documents to substantiate positions",
+      "prepare professional cover note",
+      "summarize licensor positions on each contested point",
+      "explain rationale",
+      "rebut licensee asserted benchmarks"
+    ],
+    "workflow_evidence": [
+      {
+        "quote": "Using the provided instruction email, strategy guidance, and negotiation playbook",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "prepare a counter-turn redline of the agreement",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "responding to every tracked change in the licensee's markup (accepting, rejecting, or proposing counter-language for each)",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Validate all financial arithmetic against the financial model",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "reference the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule) to substantiate your positions",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "prepare a professional cover note",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "summarizing the licensor's positions on each contested point",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "explaining the rationale",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "rebutting the licensee's asserted benchmarks",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json",
+        "start_char": null,
+        "end_char": null
+      }
+    ],
+    "unknowns": [
+      "The exact tracked changes and specific counter-language are not provided in the task text.",
+      "The specific contents of the instruction email, strategy guidance, negotiation playbook, financial model, and supporting documents are not provided in the task text.",
+      "Work type and tags are null."
+    ],
+    "confidence": 0.9
+  },
+  "raw_responses": [
+    "{\"schema_version\":\"0.1\",\"task_id\":\"tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05\",\"task_type\":{\"original\":\"Redline Trademark License Agreement First Turn\",\"normalized\":\"contract redline\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Redline Trademark License Agreement First Turn\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},\"actions\":[{\"original\":\"Using the provided instruction email, strategy guidance, and negotiation playbook\",\"normalized\":\"use provided instruction email, strategy guidance, and negotiation playbook\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Using the provided instruction email, strategy guidance, and negotiation playbook\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"prepare a counter-turn redline of the agreement\",\"normalized\":\"prepare counter-turn redline\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"prepare a counter-turn redline of the agreement\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"responding to every tracked change in the licensee's markup (accepting, rejecting, or proposing counter-language for each)\",\"normalized\":\"respond to every tracked change in licensee markup, accepting, rejecting, or proposing counter-language for each change\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"responding to every tracked change in the licensee's markup (accepting, rejecting, or proposing counter-language for each)\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"Validate all financial arithmetic against the financial model\",\"normalized\":\"validate financial arithmetic against financial model\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Validate all financial arithmetic against the financial model\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"reference the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule) to substantiate your positions\",\"normalized\":\"reference supporting documents to substantiate positions\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"reference the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule) to substantiate your positions\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"prepare a professional cover note\",\"normalized\":\"prepare professional cover note\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"prepare a professional cover note\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"summarizing the licensor's positions on each contested point\",\"normalized\":\"summarize licensor positions on each contested point\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"summarizing the licensor's positions on each contested point\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"explaining the rationale\",\"normalized\":\"explain rationale\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"explaining the rationale\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"rebutting the licensee's asserted benchmarks\",\"normalized\":\"rebut licensee asserted benchmarks\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"rebutting the licensee's asserted benchmarks\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]}],\"objects\":[{\"original\":\"Trademark License Agreement\",\"normalized\":\"trademark license agreement\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Redline Trademark License Agreement First Turn\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"the licensee's markup\",\"normalized\":\"licensee markup\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"the licensee's markup\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"every tracked change\",\"normalized\":\"tracked changes\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"every tracked change in the licensee's markup\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"counter-language\",\"normalized\":\"counter-language\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"proposing counter-language for each\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"financial arithmetic\",\"normalized\":\"financial arithmetic\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"all financial arithmetic\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"the financial model\",\"normalized\":\"financial model\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"the financial model\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule)\",\"normalized\":\"supporting documents\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule)\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"compliance methodology\",\"normalized\":\"compliance methodology\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"compliance methodology\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"territory memo\",\"normalized\":\"territory memo\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"territory memo\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"royalty benchmarks\",\"normalized\":\"royalty benchmarks\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"royalty benchmarks\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"business plan\",\"normalized\":\"business plan\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"business plan\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"registration schedule\",\"normalized\":\"registration schedule\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"registration schedule\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"the provided instruction email\",\"normalized\":\"instruction email\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"the provided instruction email\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"strategy guidance\",\"normalized\":\"strategy guidance\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"strategy guidance\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"negotiation playbook\",\"normalized\":\"negotiation playbook\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"negotiation playbook\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"professional cover note\",\"normalized\":\"cover note\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"professional cover note\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"the licensor's positions\",\"normalized\":\"licensor positions\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"the licensor's positions\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"each contested point\",\"normalized\":\"contested points\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"each contested point\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"the rationale\",\"normalized\":\"rationale\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"the rationale\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"the licensee's asserted benchmarks\",\"normalized\":\"licensee asserted benchmarks\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"the licensee's asserted benchmarks\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]}],\"deliverables\":[{\"original\":\"counter-turn-redline-v3-rh.docx\",\"normalized\":\"counter-turn redline DOCX\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"counter-turn-redline-v3-rh.docx\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]},{\"original\":\"cover-note-to-kwon-park.docx\",\"normalized\":\"cover note DOCX\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"cover-note-to-kwon-park.docx\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}]}],\"workflow_signature\":[\"use provided instruction email, strategy guidance, and negotiation playbook\",\"prepare counter-turn redline\",\"respond to every tracked change in licensee markup\",\"accept, reject, or propose counter-language for each change\",\"validate financial arithmetic against financial model\",\"reference supporting documents to substantiate positions\",\"prepare professional cover note\",\"summarize licensor positions on each contested point\",\"explain rationale\",\"rebut licensee asserted benchmarks\"],\"workflow_evidence\":[{\"quote\":\"Using the provided instruction email, strategy guidance, and negotiation playbook\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"prepare a counter-turn redline of the agreement\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"responding to every tracked change in the licensee's markup (accepting, rejecting, or proposing counter-language for each)\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"Validate all financial arithmetic against the financial model\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"reference the supporting documents (compliance methodology, territory memo, royalty benchmarks, business plan, and registration schedule) to substantiate your positions\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"prepare a professional cover note\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"summarizing the licensor's positions on each contested point\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"explaining the rationale\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"},{\"quote\":\"rebutting the licensee's asserted benchmarks\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/contracts/ip-licensing/license-agreement-first-turn-redline/scenario-05/task.json\"}],\"unknowns\":[\"The exact tracked changes and specific counter-language are not provided in the task text.\",\"The specific contents of the instruction email, strategy guidance, negotiation playbook, financial model, and supporting documents are not provided in the task text.\",\"Work type and tags are null.\"],\"confidence\":0.9}"
+  ],
+  "attempts": 1,
+  "failure_reason": null
+}

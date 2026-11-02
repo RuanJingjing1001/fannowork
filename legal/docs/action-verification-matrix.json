@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "levels": [
+    "covered",
+    "partial",
+    "not_applicable"
+  ],
+  "actions": [
+    {
+      "id": "filesystem.list",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "partial",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_filesystem_capability.py",
+        "legal/tests/integration/test_container_action_contracts.py"
+      ]
+    },
+    {
+      "id": "filesystem.read",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_filesystem_capability.py",
+        "legal/tests/integration/test_container_action_contracts.py"
+      ]
+    },
+    {
+      "id": "filesystem.write",
+      "effect": "create_or_replace_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_filesystem_capability.py",
+        "legal/tests/unit/test_legal_environment.py",
+        "legal/tests/integration/test_container_action_contracts.py"
+      ]
+    },
+    {
+      "id": "document.extract_text",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_document_capability.py",
+        "legal/tests/integration/test_container_action_contracts.py",
+        "legal/tests/integration/test_litigation_invoice_task.py"
+      ]
+    },
+    {
+      "id": "document.convert",
+      "effect": "create_or_replace_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_document_capability.py",
+        "legal/tests/integration/test_libreoffice_integration.py",
+        "legal/tests/integration/test_container_action_contracts.py"
+      ]
+    },
+    {
+      "id": "document.append_paragraph",
+      "effect": "create_or_replace_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_document_capability.py",
+        "legal/tests/integration/test_libreoffice_uno_backend.py",
+        "legal/tests/integration/test_container_action_contracts.py"
+      ]
+    },
+    {
+      "id": "document.create",
+      "effect": "create_or_replace_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_writer_workflow.py",
+        "legal/tests/integration/test_container_action_contracts.py",
+        "legal/tests/unit/test_writer_failure_safety.py"
+      ]
+    },
+    {
+      "id": "document.insert_heading",
+      "effect": "modify_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_writer_workflow.py",
+        "legal/tests/integration/test_container_action_contracts.py",
+        "legal/tests/unit/test_writer_failure_safety.py"
+      ]
+    },
+    {
+      "id": "document.insert_paragraph",
+      "effect": "modify_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_writer_workflow.py",
+        "legal/tests/integration/test_container_action_contracts.py",
+        "legal/tests/unit/test_writer_failure_safety.py"
+      ]
+    },
+    {
+      "id": "document.add_table",
+      "effect": "modify_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_writer_workflow.py",
+        "legal/tests/integration/test_container_action_contracts.py",
+        "legal/tests/unit/test_writer_failure_safety.py"
+      ]
+    },
+    {
+      "id": "document.save_as",
+      "effect": "create_or_replace_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_writer_workflow.py",
+        "legal/tests/integration/test_container_action_contracts.py",
+        "legal/tests/unit/test_writer_failure_safety.py"
+      ]
+    },
+    {
+      "id": "spreadsheet.inspect_workbook",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_calc_backend.py",
+        "legal/tests/integration/test_container_action_contracts.py",
+        "legal/tests/unit/test_spreadsheet_failure_safety.py"
+      ]
+    },
+    {
+      "id": "spreadsheet.read_range",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_calc_backend.py",
+        "legal/tests/integration/test_litigation_invoice_task.py",
+        "legal/tests/unit/test_spreadsheet_failure_safety.py"
+      ]
+    },
+    {
+      "id": "spreadsheet.find",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_libreoffice_calc_backend.py",
+        "legal/tests/integration/test_litigation_invoice_task.py",
+        "legal/tests/unit/test_spreadsheet_failure_safety.py"
+      ]
+    },
+    {
+      "id": "email.search",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "partial",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_greenmail_environment.py",
+        "legal/tests/integration/test_litigation_invoice_email.py"
+      ]
+    },
+    {
+      "id": "email.read",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "partial",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_greenmail_environment.py",
+        "legal/tests/integration/test_litigation_invoice_email.py"
+      ]
+    },
+    {
+      "id": "email.download_attachment",
+      "effect": "create_file",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_email_capability.py",
+        "legal/tests/integration/test_greenmail_environment.py"
+      ]
+    },
+    {
+      "id": "email.send",
+      "effect": "send_email",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "partial",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/integration/test_greenmail_environment.py",
+        "legal/tests/integration/test_greenmail_snapshot.py"
+      ]
+    },
+    {
+      "id": "calendar.list_calendars",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "partial",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_calendar_capability.py",
+        "legal/tests/integration/test_radicale_calendar_environment.py"
+      ]
+    },
+    {
+      "id": "calendar.list_events",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "partial",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_calendar_capability.py",
+        "legal/tests/integration/test_radicale_calendar_environment.py"
+      ]
+    },
+    {
+      "id": "calendar.find_events",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "covered",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_calendar_capability.py",
+        "legal/tests/integration/test_radicale_calendar_environment.py"
+      ]
+    },
+    {
+      "id": "calendar.create_event",
+      "effect": "create_event",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_calendar_capability.py",
+        "legal/tests/integration/test_radicale_calendar_environment.py"
+      ]
+    },
+    {
+      "id": "calendar.delete_event",
+      "effect": "delete_event",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "partial",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_calendar_capability.py",
+        "legal/tests/integration/test_radicale_calendar_environment.py"
+      ]
+    },
+    {
+      "id": "records.get",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "partial",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_records_capability.py",
+        "legal/tests/unit/test_legal_environment.py"
+      ]
+    },
+    {
+      "id": "records.query",
+      "effect": "read_only",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "not_applicable",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_records_capability.py"
+      ]
+    },
+    {
+      "id": "records.update",
+      "effect": "update_record",
+      "contract": "covered",
+      "backend": "covered",
+      "observation": "covered",
+      "independent_check": "covered",
+      "permission": "covered",
+      "failure": "covered",
+      "reset": "covered",
+      "status": "core_verified",
+      "evidence": [
+        "legal/tests/unit/test_records_capability.py",
+        "legal/tests/unit/test_legal_environment.py",
+        "legal/tests/e2e/test_legal_runner.py"
+      ]
+    }
+  ]
+}

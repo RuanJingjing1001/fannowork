@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "actors": {
+    "agent": {
+      "roles": ["legal_assistant"]
+    },
+    "evaluator": {
+      "roles": ["evaluator"]
+    }
+  },
+  "collections": [
+    {
+      "id": "matters",
+      "name": "matters",
+      "records": [
+        {
+          "id": "MATTER-002",
+          "fields": {
+            "client": "Client B",
+            "matter_type": "employment",
+            "status": "new",
+            "internal_notes": ""
+          }
+        }
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "actor": "agent",
+      "collection": "matters",
+      "operation": "get",
+      "allowed_fields": ["*"]
+    },
+    {
+      "actor": "agent",
+      "collection": "matters",
+      "operation": "update",
+      "allowed_fields": ["status", "internal_notes"]
+    }
+  ]
+}

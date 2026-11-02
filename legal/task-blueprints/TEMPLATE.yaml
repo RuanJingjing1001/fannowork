@@ -1,0 +1,88 @@
+schema_version: "1.0.0"
+
+identity:
+  blueprint_id: replace-me-v1
+  title: Replace Me
+  domain: legal
+  workflow_family: replace_me
+  status: draft
+
+source:
+  benchmark: replace-me
+  task_id: replace-me
+  sample_index: 0
+  revision: replace-me
+  source_path: replace-me
+  reference_copy_path: replace-me
+  license: unverified
+  reuse_mode: reference_only
+  annotation_path: null
+  notes: []
+
+professional_goal:
+  value: Replace with the source-supported professional goal.
+  provenance: unverified
+  evidence: []
+  notes: []
+
+agent_contract:
+  public_prompt: Replace with the proposed agent-visible task prompt.
+  must_do: []
+  must_not_expose:
+    - hidden expected facts
+    - evaluator configuration
+    - reference answers
+  provenance: design_decision
+  evidence: []
+
+inputs: []
+
+workflow:
+  - step_id: inspect_inputs
+    professional_operation: Inspect task inputs.
+    required_actions: []
+    inputs: []
+    outputs: []
+    dependencies: []
+    dependency_status: design_decision
+    side_effect: read_only
+    provenance: unverified
+    evidence: []
+    unknowns: []
+
+environment_requirements:
+  environment_profile: legal-office/v1
+  capabilities: []
+
+state_model:
+  initial_state: {}
+  mutable_state: []
+  events: []
+  reset_requirements: []
+
+permissions: []
+
+deliverables:
+  - id: replace-me
+    source_name: replace-me
+    planned_workspace_path: output/replace-me
+    media_type: application/octet-stream
+    required: true
+    provenance: unverified
+    evidence: []
+
+evaluation:
+  visibility: hidden_evaluator_only
+  agent_visible_requirements: []
+  hidden_checks: []
+  reward_policy:
+    hard_gates: []
+    weighted_checks: []
+
+unknowns: []
+
+implementation_decision:
+  selected_for_implementation: false
+  priority: null
+  next_missing_capability: null
+  blockers: []

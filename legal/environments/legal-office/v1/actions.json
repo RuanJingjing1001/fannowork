@@ -1,0 +1,888 @@
+{
+    "schema_version": 1,
+    "actions": [
+        {
+            "id": "filesystem.list",
+            "description": "List files visible to the agent",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "path"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "read_only",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path"
+            ]
+        },
+        {
+            "id": "filesystem.read",
+            "description": "Read a UTF-8 text file visible to the agent",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "path"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "read_only",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "unsupported_encoding",
+                "file_too_large"
+            ]
+        },
+        {
+            "id": "filesystem.write",
+            "description": "Write a UTF-8 file under work or output",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "path",
+                    "content"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "create_or_replace_file",
+            "errors": [
+                "permission_denied",
+                "invalid_path",
+                "file_too_large",
+                "write_failed"
+            ]
+        },
+        {
+            "id": "document.extract_text",
+            "description": "Extract text from a permitted TXT, DOCX, or text PDF file",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "path"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "read_only",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "unsupported_format",
+                "unsupported_encoding",
+                "file_too_large",
+                "text_too_large",
+                "encrypted_document",
+                "backend_unavailable",
+                "extraction_failed"
+            ]
+        },
+        {
+            "id": "document.convert",
+            "description": "Convert a permitted document using LibreOffice",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "source_path": {
+                        "type": "string"
+                    },
+                    "target_path": {
+                        "type": "string"
+                    },
+                    "format": {
+                        "type": "string",
+                        "enum": [
+                            "pdf"
+                        ]
+                    }
+                },
+                "required": [
+                    "source_path",
+                    "target_path",
+                    "format"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "create_or_replace_file",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "unsupported_format",
+                "unsupported_output_format",
+                "invalid_target_extension",
+                "file_too_large",
+                "output_too_large",
+                "backend_unavailable",
+                "conversion_timeout",
+                "conversion_failed",
+                "conversion_output_missing"
+            ]
+        },
+        {
+            "id": "document.append_paragraph",
+            "description": "Append a paragraph using LibreOffice Writer through UNO",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "source_path": {
+                        "type": "string"
+                    },
+                    "target_path": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "source_path",
+                    "target_path",
+                    "text"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "create_or_replace_file",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "invalid_text",
+                "text_too_large",
+                "unsupported_format",
+                "invalid_target_extension",
+                "uno_backend_unavailable",
+                "uno_connection_failed",
+                "uno_timeout",
+                "document_open_failed",
+                "document_edit_failed",
+                "document_save_failed",
+                "edit_output_missing"
+            ]
+        },
+                {
+            "id": "document.create",
+            "description": "Create a new Writer document through LibreOffice UNO",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "path"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "create_or_replace_file",
+            "errors": [
+                "permission_denied",
+                "invalid_path",
+                "invalid_text",
+                "invalid_target_extension",
+                "output_too_large",
+                "uno_backend_unavailable",
+                "uno_connection_failed",
+                "uno_timeout",
+                "document_create_failed",
+                "document_save_failed",
+                "edit_output_missing",
+                "edit_output_mismatch"
+            ]
+        },
+        {
+            "id": "document.insert_heading",
+            "description": "Insert a styled heading into a Writer document through LibreOffice UNO",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "level": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 10
+                    }
+                },
+                "required": [
+                    "path",
+                    "text",
+                    "level"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "modify_file",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "invalid_text",
+                "text_too_large",
+                "invalid_heading_level",
+                "unsupported_format",
+                "uno_backend_unavailable",
+                "uno_connection_failed",
+                "uno_timeout",
+                "document_open_failed",
+                "document_edit_failed",
+                "document_save_failed",
+                "edit_output_missing",
+                "edit_output_mismatch"
+            ]
+        },
+        {
+            "id": "document.insert_paragraph",
+            "description": "Insert a styled paragraph into a Writer document through LibreOffice UNO",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "style": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "path",
+                    "text"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "modify_file",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "invalid_text",
+                "invalid_style",
+                "text_too_large",
+                "unsupported_format",
+                "uno_backend_unavailable",
+                "uno_connection_failed",
+                "uno_timeout",
+                "document_open_failed",
+                "document_edit_failed",
+                "document_save_failed",
+                "edit_output_missing",
+                "edit_output_mismatch"
+            ]
+        },
+        {
+            "id": "document.add_table",
+            "description": "Insert a structured table into a Writer document through LibreOffice UNO",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    },
+                    "headers": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "rows": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "path",
+                    "headers",
+                    "rows"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "modify_file",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "invalid_table",
+                "table_too_large",
+                "text_too_large",
+                "unsupported_format",
+                "uno_backend_unavailable",
+                "uno_connection_failed",
+                "uno_timeout",
+                "document_open_failed",
+                "document_edit_failed",
+                "document_save_failed",
+                "edit_output_missing",
+                "edit_output_mismatch"
+            ]
+        },
+        {
+            "id": "document.save_as",
+            "description": "Save a Writer document to DOCX or ODT through LibreOffice UNO",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "source_path": {
+                        "type": "string"
+                    },
+                    "target_path": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "source_path",
+                    "target_path"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "create_or_replace_file",
+            "errors": [
+                "path_not_found",
+                "permission_denied",
+                "invalid_path",
+                "unsupported_format",
+                "invalid_target_extension",
+                "file_too_large",
+                "output_too_large",
+                "uno_backend_unavailable",
+                "uno_connection_failed",
+                "uno_timeout",
+                "document_open_failed",
+                "document_save_failed",
+                "edit_output_missing",
+                "edit_output_mismatch"
+            ]
+        },
+        {
+    "id": "spreadsheet.inspect_workbook",
+    "description": "Inspect spreadsheet sheets and used ranges through LibreOffice Calc",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "path": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "path"
+        ],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "path_not_found",
+        "permission_denied",
+        "invalid_path",
+        "unsupported_format",
+        "file_too_large",
+        "uno_backend_unavailable",
+        "uno_connection_failed",
+        "uno_timeout",
+        "spreadsheet_open_failed",
+        "spreadsheet_read_failed",
+        "invalid_worker_response"
+    ]
+},
+{
+    "id": "spreadsheet.read_range",
+    "description": "Read typed cells from an A1 range through LibreOffice Calc",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "path": {
+                "type": "string"
+            },
+            "sheet": {
+                "type": "string"
+            },
+            "range": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "path",
+            "sheet",
+            "range"
+        ],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "path_not_found",
+        "permission_denied",
+        "invalid_path",
+        "unsupported_format",
+        "file_too_large",
+        "invalid_sheet",
+        "sheet_not_found",
+        "invalid_range",
+        "range_too_large",
+        "uno_backend_unavailable",
+        "uno_connection_failed",
+        "uno_timeout",
+        "spreadsheet_open_failed",
+        "spreadsheet_read_failed",
+        "invalid_worker_response"
+    ]
+},
+{
+    "id": "spreadsheet.find",
+    "description": "Find text in spreadsheet cells through LibreOffice Calc",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "path": {
+                "type": "string"
+            },
+            "query": {
+                "type": "string"
+            },
+            "sheet": {
+                "type": "string"
+            },
+            "case_sensitive": {
+                "type": "boolean"
+            },
+            "max_results": {
+                "type": "integer",
+                "minimum": 1
+            }
+        },
+        "required": [
+            "path",
+            "query"
+        ],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "path_not_found",
+        "permission_denied",
+        "invalid_path",
+        "unsupported_format",
+        "file_too_large",
+        "invalid_query",
+        "query_too_large",
+        "invalid_sheet",
+        "sheet_not_found",
+        "invalid_result_limit",
+        "workbook_too_large",
+        "uno_backend_unavailable",
+        "uno_connection_failed",
+        "uno_timeout",
+        "spreadsheet_open_failed",
+        "spreadsheet_read_failed",
+        "invalid_worker_response"
+    ]
+},
+{
+    "id": "email.search",
+    "description": "Search the agent mailbox through GreenMail IMAP",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "query": {
+                "type": "string"
+            },
+            "sender": {
+                "type": "string"
+            },
+            "subject": {
+                "type": "string"
+            },
+            "max_results": {
+                "type": "integer",
+                "minimum": 1
+            }
+        },
+        "required": [],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "invalid_query",
+        "query_too_large",
+        "invalid_result_limit",
+        "email_connection_failed",
+        "email_search_failed",
+        "email_timeout",
+        "email_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "email.read",
+    "description": "Read one message from the agent mailbox through GreenMail IMAP",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "message_id": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "message_id"
+        ],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "invalid_message_id",
+        "message_not_found",
+        "email_connection_failed",
+        "email_read_failed",
+        "email_timeout",
+        "email_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "email.download_attachment",
+    "description": "Download one MIME attachment into the controlled task workspace",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "message_id": {
+                "type": "string"
+            },
+            "attachment_id": {
+                "type": "string"
+            },
+            "target_path": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "message_id",
+            "attachment_id",
+            "target_path"
+        ],
+        "additionalProperties": false
+    },
+    "effect": "create_file",
+    "errors": [
+        "invalid_message_id",
+        "invalid_attachment_id",
+        "message_not_found",
+        "attachment_not_found",
+        "attachment_too_large",
+        "invalid_path",
+        "permission_denied",
+        "write_failed",
+        "email_connection_failed",
+        "email_read_failed",
+        "email_timeout",
+        "email_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "email.send",
+    "description": "Send an email from the configured agent account through GreenMail SMTP",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "to": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "string"
+                }
+            },
+            "cc": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "subject": {
+                "type": "string"
+            },
+            "body": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "to",
+            "subject",
+            "body"
+        ],
+        "additionalProperties": false
+    },
+    "effect": "send_email",
+    "errors": [
+        "invalid_recipient",
+        "recipient_not_allowed",
+        "invalid_subject",
+        "subject_too_large",
+        "invalid_body",
+        "body_too_large",
+        "email_send_failed",
+        "email_connection_failed",
+        "email_timeout",
+        "email_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "calendar.list_calendars",
+    "description": "List calendars visible to the agent through Radicale CalDAV",
+    "input_schema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "calendar_connection_failed",
+        "calendar_list_failed",
+        "calendar_timeout",
+        "calendar_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "calendar.list_events",
+    "description": "List events in a calendar, optionally within an ISO datetime range",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "calendar": {"type": "string"},
+            "start": {"type": "string"},
+            "end": {"type": "string"}
+        },
+        "required": ["calendar"],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "invalid_calendar",
+        "invalid_datetime",
+        "invalid_time_range",
+        "calendar_not_found",
+        "calendar_read_failed",
+        "calendar_connection_failed",
+        "calendar_timeout",
+        "calendar_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "calendar.find_events",
+    "description": "Find calendar events by summary, description or location",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "calendar": {"type": "string"},
+            "query": {"type": "string"},
+            "max_results": {"type": "integer", "minimum": 1}
+        },
+        "required": ["calendar", "query"],
+        "additionalProperties": false
+    },
+    "effect": "read_only",
+    "errors": [
+        "invalid_calendar",
+        "invalid_query",
+        "query_too_large",
+        "invalid_result_limit",
+        "calendar_not_found",
+        "calendar_read_failed",
+        "calendar_connection_failed",
+        "calendar_timeout",
+        "calendar_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "calendar.create_event",
+    "description": "Create and persist a calendar event through Radicale CalDAV",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "calendar": {"type": "string"},
+            "uid": {"type": "string"},
+            "summary": {"type": "string"},
+            "starts_at": {"type": "string"},
+            "ends_at": {"type": "string"},
+            "description": {"type": "string"},
+            "location": {"type": "string"}
+        },
+        "required": [
+            "calendar",
+            "uid",
+            "summary",
+            "starts_at",
+            "ends_at"
+        ],
+        "additionalProperties": false
+    },
+    "effect": "create_event",
+    "errors": [
+        "invalid_calendar",
+        "invalid_uid",
+        "invalid_summary",
+        "invalid_datetime",
+        "invalid_time_range",
+        "invalid_event_content",
+        "summary_too_large",
+        "description_too_large",
+        "calendar_not_found",
+        "event_already_exists",
+        "event_create_failed",
+        "calendar_connection_failed",
+        "calendar_timeout",
+        "calendar_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+{
+    "id": "calendar.delete_event",
+    "description": "Delete one calendar event by UID through Radicale CalDAV",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "calendar": {"type": "string"},
+            "uid": {"type": "string"}
+        },
+        "required": ["calendar", "uid"],
+        "additionalProperties": false
+    },
+    "effect": "delete_event",
+    "errors": [
+        "invalid_calendar",
+        "invalid_uid",
+        "calendar_not_found",
+        "event_not_found",
+        "calendar_connection_failed",
+        "calendar_timeout",
+        "calendar_backend_unavailable",
+        "invalid_backend_response"
+    ]
+},
+        {
+            "id": "records.get",
+            "description": "Read one permitted record",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "collection": {
+                        "type": "string"
+                    },
+                    "record_id": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "collection",
+                    "record_id"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "read_only",
+            "errors": [
+                "collection_not_found",
+                "record_not_found",
+                "permission_denied"
+            ]
+        },
+        {
+            "id": "records.query",
+            "description": "Query permitted records using equality filters",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "collection": {
+                        "type": "string"
+                    },
+                    "filters": {
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "collection"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "read_only",
+            "errors": [
+                "collection_not_found",
+                "invalid_filter",
+                "permission_denied"
+            ]
+        },
+        {
+            "id": "records.update",
+            "description": "Update permitted fields of a record",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "collection": {
+                        "type": "string"
+                    },
+                    "record_id": {
+                        "type": "string"
+                    },
+                    "fields": {
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "collection",
+                    "record_id",
+                    "fields"
+                ],
+                "additionalProperties": false
+            },
+            "effect": "update_record",
+            "errors": [
+                "collection_not_found",
+                "record_not_found",
+                "invalid_field",
+                "permission_denied"
+            ]
+        }
+    ]
+}

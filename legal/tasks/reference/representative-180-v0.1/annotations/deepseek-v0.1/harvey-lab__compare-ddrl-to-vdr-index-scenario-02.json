@@ -1,0 +1,165 @@
+{
+  "task_id": "tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02",
+  "status": "success",
+  "prompt_version": "legal-workflow-extract-v0.1.0",
+  "requested_model": "deepseek-flash",
+  "returned_model": "deepseek-flash",
+  "extraction": {
+    "schema_version": "0.1",
+    "task_id": "tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02",
+    "task_type": {
+      "normalized": "analyze",
+      "original": "analyze",
+      "evidence": [
+        {
+          "quote": "\"work_type\": \"analyze\"",
+          "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+          "start_char": null,
+          "end_char": null
+        }
+      ],
+      "provenance": "source_fact"
+    },
+    "actions": [
+      {
+        "normalized": "review_attached_due_diligence_documents",
+        "original": "Review the attached DDRL, VDR index, status tracker, and associate notes",
+        "evidence": [
+          {
+            "quote": "Review the attached DDRL, VDR index, status tracker, and associate notes",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "prepare_gap_analysis_memo",
+        "original": "prepare a comprehensive gap analysis memo",
+        "evidence": [
+          {
+            "quote": "prepare a comprehensive gap analysis memo",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "objects": [
+      {
+        "normalized": "DDRL",
+        "original": "DDRL",
+        "evidence": [
+          {
+            "quote": "DDRL",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "VDR_index",
+        "original": "VDR index",
+        "evidence": [
+          {
+            "quote": "VDR index",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "status_tracker",
+        "original": "status tracker",
+        "evidence": [
+          {
+            "quote": "status tracker",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "associate_notes",
+        "original": "associate notes",
+        "evidence": [
+          {
+            "quote": "associate notes",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      },
+      {
+        "normalized": "gap_analysis_memo",
+        "original": "gap analysis memo",
+        "evidence": [
+          {
+            "quote": "gap analysis memo",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "deliverables": [
+      {
+        "normalized": "gap-analysis-memo.docx",
+        "original": "gap-analysis-memo.docx",
+        "evidence": [
+          {
+            "quote": "`gap-analysis-memo.docx`",
+            "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+            "start_char": null,
+            "end_char": null
+          }
+        ],
+        "provenance": "source_fact"
+      }
+    ],
+    "workflow_signature": [
+      "review_ddrl",
+      "review_vdr_index",
+      "review_status_tracker",
+      "review_associate_notes",
+      "prepare_gap_analysis_memo"
+    ],
+    "workflow_evidence": [
+      {
+        "quote": "Review the attached DDRL, VDR index, status tracker, and associate notes; prepare a comprehensive gap analysis memo.",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+        "start_char": null,
+        "end_char": null
+      },
+      {
+        "quote": "Output: `gap-analysis-memo.docx`.",
+        "source_path": "/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json",
+        "start_char": null,
+        "end_char": null
+      }
+    ],
+    "unknowns": [
+      "The contents of the attached DDRL, VDR index, status tracker, and associate notes are not included in the supplied task text.",
+      "The specific gap findings, counts, and document names are not established by the task text beyond the deliverable and evaluation criteria."
+    ],
+    "confidence": 0.95
+  },
+  "raw_responses": [
+    "{\"schema_version\":\"0.1\",\"task_id\":\"tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02\",\"task_type\":{\"original\":\"analyze\",\"normalized\":\"analyze\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"\\\"work_type\\\": \\\"analyze\\\"\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]},\"actions\":[{\"original\":\"Review the attached DDRL, VDR index, status tracker, and associate notes\",\"normalized\":\"review_attached_due_diligence_documents\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"Review the attached DDRL, VDR index, status tracker, and associate notes\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]},{\"original\":\"prepare a comprehensive gap analysis memo\",\"normalized\":\"prepare_gap_analysis_memo\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"prepare a comprehensive gap analysis memo\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]}],\"objects\":[{\"original\":\"DDRL\",\"normalized\":\"DDRL\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"DDRL\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]},{\"original\":\"VDR index\",\"normalized\":\"VDR_index\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"VDR index\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]},{\"original\":\"status tracker\",\"normalized\":\"status_tracker\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"status tracker\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]},{\"original\":\"associate notes\",\"normalized\":\"associate_notes\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"associate notes\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]},{\"original\":\"gap analysis memo\",\"normalized\":\"gap_analysis_memo\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"gap analysis memo\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]}],\"deliverables\":[{\"original\":\"gap-analysis-memo.docx\",\"normalized\":\"gap-analysis-memo.docx\",\"provenance\":\"source_fact\",\"evidence\":[{\"quote\":\"`gap-analysis-memo.docx`\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}]}],\"workflow_signature\":[\"review_ddrl\",\"review_vdr_index\",\"review_status_tracker\",\"review_associate_notes\",\"prepare_gap_analysis_memo\"],\"workflow_evidence\":[{\"quote\":\"Review the attached DDRL, VDR index, status tracker, and associate notes; prepare a comprehensive gap analysis memo.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"},{\"quote\":\"Output: `gap-analysis-memo.docx`.\",\"source_path\":\"/data1/rjj/environment-catalog/legal-workflow-output/v0.1/source-cache/harvey-subset/tasks/corporate-ma/compare-ddrl-to-vdr-index/scenario-02/task.json\"}],\"unknowns\":[\"The contents of the attached DDRL, VDR index, status tracker, and associate notes are not included in the supplied task text.\",\"The specific gap findings, counts, and document names are not established by the task text beyond the deliverable and evaluation criteria.\"],\"confidence\":0.95}"
+  ],
+  "attempts": 1,
+  "failure_reason": null
+}

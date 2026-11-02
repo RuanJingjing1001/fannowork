@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "actors": {
+    "agent": {
+      "roles": ["legal_assistant"]
+    },
+    "evaluator": {
+      "roles": ["evaluator"]
+    }
+  },
+  "collections": [
+    {
+      "id": "transactions",
+      "name": "transactions",
+      "records": [
+        {
+          "id": "TX-TEST-001",
+          "fields": {
+            "client": "Client A",
+            "status": "under_review",
+            "risk_notes": "",
+            "agreed_price": 1000000
+          }
+        }
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "actor": "agent",
+      "collection": "transactions",
+      "operation": "get",
+      "allowed_fields": ["*"]
+    },
+    {
+      "actor": "agent",
+      "collection": "transactions",
+      "operation": "query",
+      "allowed_fields": ["*"]
+    },
+    {
+      "actor": "agent",
+      "collection": "transactions",
+      "operation": "update",
+      "allowed_fields": ["status", "risk_notes"]
+    }
+  ]
+}
